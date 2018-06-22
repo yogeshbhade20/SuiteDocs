@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>aos_contracts - suitecrm Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>suitecrm</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>aos_contracts</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="aos_contracts_am_projecttemplates_1_c.aos_contracts_am_projecttemplates_1aos_contracts_ida references aos_contracts.id">
+						<a href='aos_contracts_am_projecttemplates_1_c.html'>aos_contracts_am_projecttemplates_1_c</a><span class='relatedKey'>.aos_contracts_am_projecttemplates_1aos_contracts_ida</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="aos_contracts_am_projecttemplates_2_c.aos_contracts_am_projecttemplates_2aos_contracts_ida references aos_contracts.id">
+						<a href='aos_contracts_am_projecttemplates_2_c.html'>aos_contracts_am_projecttemplates_2_c</a><span class='relatedKey'>.aos_contracts_am_projecttemplates_2aos_contracts_ida</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="aos_contracts_documents.aos_contracts_id references aos_contracts.id">
+						<a href='aos_contracts_documents.html'>aos_contracts_documents</a><span class='relatedKey'>.aos_contracts_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="aos_quotes_os_contracts_c.aos_quotes4dc0ntracts_idb references aos_contracts.id">
+						<a href='aos_quotes_os_contracts_c.html'>aos_quotes_os_contracts_c</a><span class='relatedKey'>.aos_quotes4dc0ntracts_idb</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="emails_beans.bean_id references aos_contracts.id">
+						<a href='emails_beans.html'>emails_beans</a><span class='relatedKey'>.bean_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references aos_contracts.id">
+						<a href='securitygroups_records.html'>securitygroups_records</a><span class='relatedKey'>.record_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="aos_contracts.id references calls.parent_id">
+						<a href='calls.html'>calls</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="aos_contracts.id references aos_line_item_groups.parent_id">
+						<a href='aos_line_item_groups.html'>aos_line_item_groups</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="aos_contracts.id references tasks.parent_id">
+						<a href='tasks.html'>tasks</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="aos_contracts.id references notes.parent_id">
+						<a href='notes.html'>notes</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="aos_contracts.id references meetings.parent_id">
+						<a href='meetings.html'>meetings</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="aos_contracts.id references aos_products_quotes.parent_id">
+						<a href='aos_products_quotes.html'>aos_products_quotes</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="name">name</span></td>
+				 <td>VARCHAR</td>
+				 <td>255</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_entered">date_entered</span></td>
+				 <td>DATETIME</td>
+				 <td>26</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_modified">date_modified</span></td>
+				 <td>DATETIME</td>
+				 <td>26</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="modified_user_id">modified_user_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="users.id references aos_contracts.modified_user_id">
+						<a href='users.html'>users</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="created_by">created_by</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="users.id references aos_contracts.created_by">
+						<a href='users.html'>users</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="description">description</span></td>
+				 <td>TEXT</td>
+				 <td>65535</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="deleted">deleted</span></td>
+				 <td>BIT</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>0</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="assigned_user_id">assigned_user_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="users.id references aos_contracts.assigned_user_id">
+						<a href='users.html'>users</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="reference_code">reference_code</span></td>
+				 <td>VARCHAR</td>
+				 <td>255</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="start_date">start_date</span></td>
+				 <td>DATE</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="end_date">end_date</span></td>
+				 <td>DATE</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="total_contract_value">total_contract_value</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="total_contract_value_usdollar">total_contract_value_usdollar</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="currency_id">currency_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="status">status</span></td>
+				 <td>VARCHAR</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>Not Started</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="customer_signed_date">customer_signed_date</span></td>
+				 <td>DATE</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="company_signed_date">company_signed_date</span></td>
+				 <td>DATE</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="renewal_reminder_date">renewal_reminder_date</span></td>
+				 <td>DATETIME</td>
+				 <td>26</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="contract_type">contract_type</span></td>
+				 <td>VARCHAR</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>Type</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="contract_account_id">contract_account_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="accounts.id references aos_contracts.contract_account_id">
+						<a href='accounts.html'>accounts</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="opportunity_id">opportunity_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="opportunities.id references aos_contracts.opportunity_id">
+						<a href='opportunities.html'>opportunities</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="contact_id">contact_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="contacts.id references aos_contracts.contact_id">
+						<a href='contacts.html'>contacts</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="call_id">call_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="total_amt">total_amt</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="total_amt_usdollar">total_amt_usdollar</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="subtotal_amount">subtotal_amount</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="subtotal_amount_usdollar">subtotal_amount_usdollar</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="discount_amount">discount_amount</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="discount_amount_usdollar">discount_amount_usdollar</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="tax_amount">tax_amount</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="tax_amount_usdollar">tax_amount_usdollar</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="shipping_amount">shipping_amount</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="shipping_amount_usdollar">shipping_amount_usdollar</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="shipping_tax">shipping_tax</span></td>
+				 <td>VARCHAR</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="shipping_tax_amt">shipping_tax_amt</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="shipping_tax_amt_usdollar">shipping_tax_amt_usdollar</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="total_amount">total_amount</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="total_amount_usdollar">total_amount_usdollar</span></td>
+				 <td>DECIMAL</td>
+				 <td>26,6</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='39 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>id</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="1382,2088,1694,2411">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="775,811,1185,2024">
+<area shape="rect" id="node3" href="calls.html" title="calls" alt="" coords="453,1291,690,1672">
+<area shape="rect" id="node4" href="meetings.html" title="meetings" alt="" coords="453,1823,690,2204">
+<area shape="rect" id="node5" href="notes.html" title="notes" alt="" coords="86,1827,287,2179">
+<area shape="rect" id="node6" href="tasks.html" title="tasks" alt="" coords="471,2375,672,2756">
+<area shape="rect" id="node7" href="aos_line_item_groups.html" title="aos_line_item_groups" alt="" coords="412,183,731,417">
+<area shape="rect" id="node8" href="aos_products_quotes.html" title="aos_products_quotes" alt="" coords="5,5,368,357">
+<area shape="rect" id="node9" href="aos_contracts_am_projecttemplates_1_c.html" title="aos_contracts_am_projecttemplates_1_c" alt="" coords="1229,1339,1847,1515">
+<area shape="rect" id="node10" href="aos_contracts_am_projecttemplates_2_c.html" title="aos_contracts_am_projecttemplates_2_c" alt="" coords="1229,759,1847,935">
+<area shape="rect" id="node11" href="aos_contracts_documents.html" title="aos_contracts_documents" alt="" coords="1398,952,1678,1128">
+<area shape="rect" id="node12" href="aos_quotes_os_contracts_c.html" title="aos_quotes_os_contracts_c" alt="" coords="1388,1145,1688,1321">
+<area shape="rect" id="node13" href="contacts.html" title="contacts" alt="" coords="1385,2536,1691,2888">
+<area shape="rect" id="node14" href="emails_beans.html" title="emails_beans" alt="" coords="2244,1957,2429,2163">
+<area shape="rect" id="node15" href="opportunities.html" title="opportunities" alt="" coords="1436,1748,1640,2071">
+<area shape="rect" id="node16" href="users.html" title="users" alt="" coords="1891,1568,2200,1861">
+<area shape="rect" id="node17" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1915,2591,2175,2825">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/aos_contracts.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="3189,8361,3501,8684">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="1020,6629,1431,7843">
+<area shape="rect" id="node3" href="aos_invoices.html" title="aos_invoices" alt="" coords="1139,2093,1311,2181">
+<area shape="rect" id="node4" href="aos_quotes.html" title="aos_quotes" alt="" coords="1145,2235,1306,2323">
+<area shape="rect" id="node5" href="calls.html" title="calls" alt="" coords="698,9012,935,9393">
+<area shape="rect" id="node6" href="campaign_log.html" title="campaign_log" alt="" coords="2903,8028,3082,8116">
+<area shape="rect" id="node7" href="cases.html" title="cases" alt="" coords="1155,3259,1295,3347">
+<area shape="rect" id="node8" href="emails.html" title="emails" alt="" coords="743,6531,891,6619">
+<area shape="rect" id="node9" href="leads.html" title="leads" alt="" coords="1155,8771,1295,8859">
+<area shape="rect" id="node10" href="meetings.html" title="meetings" alt="" coords="313,3707,551,4088">
+<area shape="rect" id="node11" href="notes.html" title="notes" alt="" coords="5,4515,207,4867">
+<area shape="rect" id="node12" href="tasks.html" title="tasks" alt="" coords="716,8184,917,8565">
+<area shape="rect" id="node30" href="aos_line_item_groups.html" title="aos_line_item_groups" alt="" coords="657,1920,976,2155">
+<area shape="rect" id="node31" href="aos_products_quotes.html" title="aos_products_quotes" alt="" coords="251,1868,613,2220">
+<area shape="rect" id="node43" href="calls_reschedule.html" title="calls_reschedule" alt="" coords="333,9556,531,9644">
+<area shape="rect" id="node16" href="contacts.html" title="contacts" alt="" coords="1475,2644,1780,2996">
+<area shape="rect" id="node18" href="opportunities.html" title="opportunities" alt="" coords="1525,6963,1729,7285">
+<area shape="rect" id="node20" href="users.html" title="users" alt="" coords="2333,4713,2642,5007">
+<area shape="rect" id="node24" href="aop_case_updates.html" title="aop_case_updates" alt="" coords="711,2319,922,2407">
+<area shape="rect" id="node50" href="aop_case_events.html" title="aop_case_events" alt="" coords="716,2424,917,2512">
+<area shape="rect" id="node13" href="accounts_bugs.html" title="accounts_bugs" alt="" coords="3581,8695,3769,8783">
+<area shape="rect" id="node14" href="bugs.html" title="bugs" alt="" coords="1909,7692,2049,7780">
+<area shape="rect" id="node15" href="accounts_contacts.html" title="accounts_contacts" alt="" coords="3569,4840,3782,4928">
+<area shape="rect" id="node17" href="accounts_opportunities.html" title="accounts_opportunities" alt="" coords="3552,7921,3799,8009">
+<area shape="rect" id="node72" href="currencies.html" title="currencies" alt="" coords="1148,6380,1303,6468">
+<area shape="rect" id="node19" href="acl_roles_users.html" title="acl_roles_users" alt="" coords="2897,6052,3088,6140">
+<area shape="rect" id="node22" href="am_projecttemplates.html" title="am_projecttemplates" alt="" coords="1866,8496,2093,8584">
+<area shape="rect" id="node25" href="aor_reports.html" title="aor_reports" alt="" coords="1898,3965,2061,4053">
+<area shape="rect" id="node26" href="aor_charts.html" title="aor_charts" alt="" coords="1549,3941,1705,4029">
+<area shape="rect" id="node27" href="aor_conditions.html" title="aor_conditions" alt="" coords="1535,4047,1720,4135">
+<area shape="rect" id="node28" href="aor_fields.html" title="aor_fields" alt="" coords="1553,4152,1702,4240">
+<area shape="rect" id="node29" href="aor_scheduled_reports.html" title="aor_scheduled_reports" alt="" coords="1506,4257,1749,4345">
+<area shape="rect" id="node35" href="documents.html" title="documents" alt="" coords="1900,7479,2059,7567">
+<area shape="rect" id="node36" href="aos_product_categories.html" title="aos_product_categories" alt="" coords="1855,1219,2104,1307">
+<area shape="rect" id="node37" href="aos_products.html" title="aos_products" alt="" coords="1539,2161,1716,2249">
+<area shape="rect" id="node39" href="aow_workflow.html" title="aow_workflow" alt="" coords="1889,6156,2069,6244">
+<area shape="rect" id="node40" href="aow_actions.html" title="aow_actions" alt="" coords="1543,4363,1711,4451">
+<area shape="rect" id="node41" href="aow_conditions.html" title="aow_conditions" alt="" coords="1532,6075,1723,6163">
+<area shape="rect" id="node42" href="aow_processed.html" title="aow_processed" alt="" coords="1533,6232,1722,6320">
+<area shape="rect" id="node47" href="campaigns.html" title="campaigns" alt="" coords="1901,7373,2058,7461">
+<area shape="rect" id="node48" href="prospects.html" title="prospects" alt="" coords="1552,8615,1703,8703">
+<area shape="rect" id="node49" href="surveyresponses.html" title="surveyresponses" alt="" coords="1527,2471,1728,2559">
+<area shape="rect" id="node54" href="document_revisions.html" title="document_revisions" alt="" coords="1516,7620,1739,7708">
+<area shape="rect" id="node60" href="project.html" title="project" alt="" coords="1557,8365,1697,8453">
+<area shape="rect" id="node61" href="project_task.html" title="project_task" alt="" coords="1142,8184,1309,8272">
+<area shape="rect" id="node63" href="fp_events.html" title="fp_events" alt="" coords="1905,828,2054,916">
+<area shape="rect" id="node64" href="jjwg_maps.html" title="jjwg_maps" alt="" coords="1902,7196,2057,7284">
+<area shape="rect" id="node68" href="oauth2clients.html" title="oauth2clients" alt="" coords="1892,4384,2067,4472">
+<area shape="rect" id="node69" href="oauth2tokens.html" title="oauth2tokens" alt="" coords="1539,4468,1715,4556">
+<area shape="rect" id="node70" href="oauth_consumer.html" title="oauth_consumer" alt="" coords="1880,5821,2079,5909">
+<area shape="rect" id="node71" href="oauth_tokens.html" title="oauth_tokens" alt="" coords="1539,5841,1715,5929">
+<area shape="rect" id="node80" href="prospect_lists.html" title="prospect_lists" alt="" coords="1889,7833,2069,7921">
+<area shape="rect" id="node82" href="schedulers.html" title="schedulers" alt="" coords="1901,5963,2058,6051">
+<area shape="rect" id="node83" href="job_queue.html" title="job_queue" alt="" coords="1549,5967,1705,6055">
+<area shape="rect" id="node84" href="securitygroups.html" title="securitygroups" alt="" coords="1886,3177,2073,3265">
+<area shape="rect" id="node85" href="fp_event_locations.html" title="fp_event_locations" alt="" coords="1521,3539,1734,3627">
+<area shape="rect" id="node87" href="aok_knowledgebase.html" title="aok_knowledgebase" alt="" coords="1869,1324,2090,1412">
+<area shape="rect" id="node88" href="aos_pdf_templates.html" title="aos_pdf_templates" alt="" coords="1873,1429,2086,1517">
+<area shape="rect" id="node89" href="email_templates.html" title="email_templates" alt="" coords="1883,543,2076,631">
+<area shape="rect" id="node90" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="1902,1535,2057,1623">
+<area shape="rect" id="node91" href="jjwg_markers.html" title="jjwg_markers" alt="" coords="1893,1640,2066,1728">
+<area shape="rect" id="node92" href="spots.html" title="spots" alt="" coords="1919,1745,2039,1833">
+<area shape="rect" id="node93" href="surveyquestionoptions.html" title="surveyquestionoptions" alt="" coords="1105,1844,1346,1932">
+<area shape="rect" id="node94" href="surveyquestionresponses.html" title="surveyquestionresponses" alt="" coords="1095,2555,1356,2643">
+<area shape="rect" id="node95" href="surveyquestions.html" title="surveyquestions" alt="" coords="1529,1776,1726,1864">
+<area shape="rect" id="node96" href="surveys.html" title="surveys" alt="" coords="1911,1113,2047,1201">
+<area shape="rect" id="node98" href="alerts.html" title="alerts" alt="" coords="1919,4557,2039,4645">
+<area shape="rect" id="node99" href="am_tasktemplates.html" title="am_tasktemplates" alt="" coords="1876,4663,2083,4751">
+<area shape="rect" id="node100" href="aobh_businesshours.html" title="aobh_businesshours" alt="" coords="1865,4768,2093,4856">
+<area shape="rect" id="node101" href="aod_index.html" title="aod_index" alt="" coords="1903,4873,2056,4961">
+<area shape="rect" id="node102" href="aod_indexevent.html" title="aod_indexevent" alt="" coords="1884,4979,2075,5067">
+<area shape="rect" id="node103" href="aok_knowledge_base_categories.html" title="aok_knowledge_base_categories" alt="" coords="1824,5084,2135,5172">
+<area shape="rect" id="node104" href="eapm.html" title="eapm" alt="" coords="1919,5189,2039,5277">
+<area shape="rect" id="node105" href="favorites.html" title="favorites" alt="" coords="1909,5295,2050,5383">
+<area shape="rect" id="node106" href="inbound_email.html" title="inbound_email" alt="" coords="1887,5400,2071,5488">
+<area shape="rect" id="node107" href="jjwg_address_cache.html" title="jjwg_address_cache" alt="" coords="1869,5505,2090,5593">
+<area shape="rect" id="node108" href="outbound_email.html" title="outbound_email" alt="" coords="1883,5611,2076,5699">
+<area shape="rect" id="node109" href="reminders.html" title="reminders" alt="" coords="1903,5716,2055,5804">
+<area shape="rect" id="node110" href="reminders_invitees.html" title="reminders_invitees" alt="" coords="1873,6385,2086,6473">
+<area shape="rect" id="node111" href="saved_search.html" title="saved_search" alt="" coords="1891,6491,2068,6579">
+<area shape="rect" id="node112" href="sugarfeed.html" title="sugarfeed" alt="" coords="1904,6632,2055,6720">
+<area shape="rect" id="node113" href="templatesectionline.html" title="templatesectionline" alt="" coords="1871,6737,2088,6825">
+<area shape="rect" id="node21" href="am_projecttemplates_contacts_1_c.html" title="am_projecttemplates_contacts_1_c" alt="" coords="2324,7337,2651,7425">
+<area shape="rect" id="node23" href="am_projecttemplates_users_1_c.html" title="am_projecttemplates_users_1_c" alt="" coords="2840,7700,3145,7788">
+<area shape="rect" id="node32" href="aos_contracts_am_projecttemplates_1_c.html" title="aos_contracts_am_projecttemplates_1_c" alt="" coords="2179,8241,2796,8417">
+<area shape="rect" id="node33" href="aos_contracts_am_projecttemplates_2_c.html" title="aos_contracts_am_projecttemplates_2_c" alt="" coords="2179,8435,2796,8611">
+<area shape="rect" id="node34" href="aos_contracts_documents.html" title="aos_contracts_documents" alt="" coords="2347,7656,2627,7832">
+<area shape="rect" id="node38" href="aos_quotes_os_contracts_c.html" title="aos_quotes_os_contracts_c" alt="" coords="1477,3644,1777,3820">
+<area shape="rect" id="node44" href="calls_contacts.html" title="calls_contacts" alt="" coords="1889,6951,2070,7039">
+<area shape="rect" id="node45" href="calls_leads.html" title="calls_leads" alt="" coords="1549,9220,1706,9308">
+<area shape="rect" id="node46" href="calls_users.html" title="calls_users" alt="" coords="2913,8449,3073,8537">
+<area shape="rect" id="node51" href="contacts_bugs.html" title="contacts_bugs" alt="" coords="2395,7232,2579,7320">
+<area shape="rect" id="node52" href="contacts_cases.html" title="contacts_cases" alt="" coords="1885,2892,2074,2980">
+<area shape="rect" id="node53" href="contacts_users.html" title="contacts_users" alt="" coords="2899,2964,3087,3052">
+<area shape="rect" id="node55" href="documents_accounts.html" title="documents_accounts" alt="" coords="3560,8509,3791,8597">
+<area shape="rect" id="node56" href="documents_contacts.html" title="documents_contacts" alt="" coords="2374,6715,2601,6803">
+<area shape="rect" id="node57" href="documents_opportunities.html" title="documents_opportunities" alt="" coords="2357,7515,2618,7603">
+<area shape="rect" id="node58" href="email_addr_bean_rel.html" title="email_addr_bean_rel" alt="" coords="3563,8364,3788,8452">
+<area shape="rect" id="node59" href="emails_beans.html" title="emails_beans" alt="" coords="3583,9172,3768,9377">
+<area shape="rect" id="node62" href="fp_events_contacts_c.html" title="fp_events_contacts_c" alt="" coords="2371,811,2604,899">
+<area shape="rect" id="node65" href="meetings_contacts.html" title="meetings_contacts" alt="" coords="1873,2715,2086,2803">
+<area shape="rect" id="node66" href="meetings_leads.html" title="meetings_leads" alt="" coords="1533,7407,1722,7495">
+<area shape="rect" id="node67" href="meetings_users.html" title="meetings_users" alt="" coords="2897,3141,3089,3229">
+<area shape="rect" id="node73" href="opportunities_contacts.html" title="opportunities_contacts" alt="" coords="1858,3459,2101,3547">
+<area shape="rect" id="node74" href="project_contacts_1_c.html" title="project_contacts_1_c" alt="" coords="1865,4279,2094,4367">
+<area shape="rect" id="node75" href="project_users_1_c.html" title="project_users_1_c" alt="" coords="2888,7923,3097,8011">
+<area shape="rect" id="node76" href="projects_accounts.html" title="projects_accounts" alt="" coords="3571,9027,3780,9115">
+<area shape="rect" id="node77" href="projects_contacts.html" title="projects_contacts" alt="" coords="1877,3600,2082,3688">
+<area shape="rect" id="node78" href="projects_opportunities.html" title="projects_opportunities" alt="" coords="1859,7975,2099,8063">
+<area shape="rect" id="node79" href="prospect_lists_prospects.html" title="prospect_lists_prospects" alt="" coords="3547,8841,3804,8929">
+<area shape="rect" id="node81" href="roles_users.html" title="roles_users" alt="" coords="2911,5947,3074,6035">
+<area shape="rect" id="node86" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="3545,2048,3805,2283">
+<area shape="rect" id="node97" href="securitygroups_users.html" title="securitygroups_users" alt="" coords="2876,4352,3109,4440">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/aos_contracts.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

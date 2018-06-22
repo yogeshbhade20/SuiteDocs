@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>cases - suitecrm Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>suitecrm</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>cases</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="cases_bugs.case_id references cases.id">
+						<a href='cases_bugs.html'>cases_bugs</a><span class='relatedKey'>.case_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="contacts_cases.case_id references cases.id">
+						<a href='contacts_cases.html'>contacts_cases</a><span class='relatedKey'>.case_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="documents_cases.case_id references cases.id">
+						<a href='documents_cases.html'>documents_cases</a><span class='relatedKey'>.case_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="emails_beans.bean_id references cases.id">
+						<a href='emails_beans.html'>emails_beans</a><span class='relatedKey'>.bean_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="jjwg_maps.parent_id references cases.id">
+						<a href='jjwg_maps.html'>jjwg_maps</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="projects_cases.case_id references cases.id">
+						<a href='projects_cases.html'>projects_cases</a><span class='relatedKey'>.case_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references cases.id">
+						<a href='securitygroups_records.html'>securitygroups_records</a><span class='relatedKey'>.record_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="cases.id references aop_case_events.case_id">
+						<a href='aop_case_events.html'>aop_case_events</a><span class='relatedKey'>.case_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="cases.id references calls.parent_id">
+						<a href='calls.html'>calls</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="cases.id references aop_case_updates.case_id">
+						<a href='aop_case_updates.html'>aop_case_updates</a><span class='relatedKey'>.case_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="cases.id references emails.parent_id">
+						<a href='emails.html'>emails</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="cases.id references tasks.parent_id">
+						<a href='tasks.html'>tasks</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="cases.id references notes.parent_id">
+						<a href='notes.html'>notes</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="cases.id references meetings.parent_id">
+						<a href='meetings.html'>meetings</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="name">name</span></td>
+				 <td>VARCHAR</td>
+				 <td>255</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_entered">date_entered</span></td>
+				 <td>DATETIME</td>
+				 <td>26</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_modified">date_modified</span></td>
+				 <td>DATETIME</td>
+				 <td>26</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="modified_user_id">modified_user_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="users.id references cases.modified_user_id">
+						<a href='users.html'>users</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="created_by">created_by</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="users.id references cases.created_by">
+						<a href='users.html'>users</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="description">description</span></td>
+				 <td>TEXT</td>
+				 <td>65535</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="deleted">deleted</span></td>
+				 <td>BIT</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>0</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="assigned_user_id">assigned_user_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="users.id references cases.assigned_user_id">
+						<a href='users.html'>users</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="case_number">case_number</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title='Automatically updated by the database'>√</td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="type">type</span></td>
+				 <td>VARCHAR</td>
+				 <td>255</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="status">status</span></td>
+				 <td>VARCHAR</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="priority">priority</span></td>
+				 <td>VARCHAR</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="resolution">resolution</span></td>
+				 <td>TEXT</td>
+				 <td>65535</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="work_log">work_log</span></td>
+				 <td>TEXT</td>
+				 <td>65535</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="account_id">account_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="accounts.id references cases.account_id">
+						<a href='accounts.html'>accounts</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="state">state</span></td>
+				 <td>VARCHAR</td>
+				 <td>100</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>Open</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="contact_created_by_id">contact_created_by_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="contacts.id references cases.contact_created_by_id">
+						<a href='contacts.html'>contacts</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='18 columns'>Table contained <span id="recordNumber">4</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>id</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>case_number</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>case_number</td>
+				 </tr>				 
+				 <tr>
+				  <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> casesnumk</td>
+				  <td>Must be unique</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>case_number</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>idx_account_id</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>account_id</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>idx_case_name</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>name</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>idx_cases_stat_del</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+				  <td>assigned_user_id + status + deleted</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="1200,1005,1512,1328">
+<area shape="rect" id="node2" href="calls.html" title="calls" alt="" coords="532,585,769,966">
+<area shape="rect" id="node3" href="cases.html" title="cases" alt="" coords="813,1526,1156,2124">
+<area shape="rect" id="node4" href="emails.html" title="emails" alt="" coords="550,984,751,1365">
+<area shape="rect" id="node5" href="meetings.html" title="meetings" alt="" coords="251,705,488,1086">
+<area shape="rect" id="node6" href="notes.html" title="notes" alt="" coords="5,888,207,1240">
+<area shape="rect" id="node7" href="tasks.html" title="tasks" alt="" coords="550,2492,751,2873">
+<area shape="rect" id="node8" href="aop_case_updates.html" title="aop_case_updates" alt="" coords="545,2066,757,2330">
+<area shape="rect" id="node9" href="aop_case_events.html" title="aop_case_events" alt="" coords="550,297,751,532">
+<area shape="rect" id="node10" href="cases_bugs.html" title="cases_bugs" alt="" coords="1267,1646,1445,1822">
+<area shape="rect" id="node11" href="contacts.html" title="contacts" alt="" coords="1203,2213,1509,2565">
+<area shape="rect" id="node12" href="contacts_cases.html" title="contacts_cases" alt="" coords="1562,2213,1751,2389">
+<area shape="rect" id="node13" href="documents_cases.html" title="documents_cases" alt="" coords="1253,1840,1459,2016">
+<area shape="rect" id="node14" href="emails_beans.html" title="emails_beans" alt="" coords="2155,1713,2340,1918">
+<area shape="rect" id="node15" href="users.html" title="users" alt="" coords="1801,1104,2111,1397">
+<area shape="rect" id="node16" href="jjwg_maps.html" title="jjwg_maps" alt="" coords="1556,1197,1757,1432">
+<area shape="rect" id="node17" href="projects_cases.html" title="projects_cases" alt="" coords="1263,1453,1449,1629">
+<area shape="rect" id="node18" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1826,566,2086,801">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/cases.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="2624,7232,2936,7555">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="895,8237,1075,8325">
+<area shape="rect" id="node3" href="aos_invoices.html" title="aos_invoices" alt="" coords="899,5689,1071,5777">
+<area shape="rect" id="node4" href="aos_quotes.html" title="aos_quotes" alt="" coords="904,5831,1065,5919">
+<area shape="rect" id="node5" href="calls.html" title="calls" alt="" coords="532,440,769,821">
+<area shape="rect" id="node6" href="campaign_log.html" title="campaign_log" alt="" coords="2338,8475,2517,8563">
+<area shape="rect" id="node7" href="cases.html" title="cases" alt="" coords="813,1011,1156,1608">
+<area shape="rect" id="node8" href="emails.html" title="emails" alt="" coords="550,2220,751,2601">
+<area shape="rect" id="node9" href="leads.html" title="leads" alt="" coords="915,9569,1055,9657">
+<area shape="rect" id="node10" href="meetings.html" title="meetings" alt="" coords="251,9785,488,10167">
+<area shape="rect" id="node11" href="notes.html" title="notes" alt="" coords="5,2319,207,2671">
+<area shape="rect" id="node12" href="tasks.html" title="tasks" alt="" coords="550,8311,751,8692">
+<area shape="rect" id="node30" href="aos_line_item_groups.html" title="aos_line_item_groups" alt="" coords="533,5621,768,5709">
+<area shape="rect" id="node31" href="aos_products_quotes.html" title="aos_products_quotes" alt="" coords="253,5656,486,5744">
+<area shape="rect" id="node38" href="calls_reschedule.html" title="calls_reschedule" alt="" coords="271,273,468,361">
+<area shape="rect" id="node16" href="contacts.html" title="contacts" alt="" coords="1200,7913,1505,8265">
+<area shape="rect" id="node18" href="opportunities.html" title="opportunities" alt="" coords="1265,8929,1440,9017">
+<area shape="rect" id="node20" href="users.html" title="users" alt="" coords="1913,5048,2222,5341">
+<area shape="rect" id="node24" href="aop_case_updates.html" title="aop_case_updates" alt="" coords="545,839,757,1103">
+<area shape="rect" id="node45" href="aop_case_events.html" title="aop_case_events" alt="" coords="550,1120,751,1355">
+<area shape="rect" id="node13" href="accounts_bugs.html" title="accounts_bugs" alt="" coords="3016,1247,3204,1335">
+<area shape="rect" id="node14" href="bugs.html" title="bugs" alt="" coords="1283,1757,1423,1845">
+<area shape="rect" id="node15" href="accounts_contacts.html" title="accounts_contacts" alt="" coords="3003,7525,3217,7613">
+<area shape="rect" id="node17" href="accounts_opportunities.html" title="accounts_opportunities" alt="" coords="2987,10125,3233,10213">
+<area shape="rect" id="node19" href="acl_roles_users.html" title="acl_roles_users" alt="" coords="2332,5229,2523,5317">
+<area shape="rect" id="node22" href="am_projecttemplates.html" title="am_projecttemplates" alt="" coords="1591,7455,1818,7543">
+<area shape="rect" id="node25" href="aor_reports.html" title="aor_reports" alt="" coords="1623,6353,1786,6441">
+<area shape="rect" id="node26" href="aor_charts.html" title="aor_charts" alt="" coords="1275,2153,1431,2241">
+<area shape="rect" id="node27" href="aor_conditions.html" title="aor_conditions" alt="" coords="1260,5825,1445,5913">
+<area shape="rect" id="node28" href="aor_fields.html" title="aor_fields" alt="" coords="1278,6059,1427,6147">
+<area shape="rect" id="node29" href="aor_scheduled_reports.html" title="aor_scheduled_reports" alt="" coords="1231,6384,1474,6472">
+<area shape="rect" id="node32" href="aos_product_categories.html" title="aos_product_categories" alt="" coords="1580,7139,1829,7227">
+<area shape="rect" id="node33" href="aos_products.html" title="aos_products" alt="" coords="1264,8388,1441,8476">
+<area shape="rect" id="node34" href="aow_workflow.html" title="aow_workflow" alt="" coords="1615,4545,1795,4633">
+<area shape="rect" id="node35" href="aow_actions.html" title="aow_actions" alt="" coords="1269,4464,1437,4552">
+<area shape="rect" id="node36" href="aow_conditions.html" title="aow_conditions" alt="" coords="1257,4621,1448,4709">
+<area shape="rect" id="node37" href="aow_processed.html" title="aow_processed" alt="" coords="1258,4884,1447,4972">
+<area shape="rect" id="node42" href="campaigns.html" title="campaigns" alt="" coords="1626,8563,1783,8651">
+<area shape="rect" id="node43" href="prospects.html" title="prospects" alt="" coords="1277,3379,1428,3467">
+<area shape="rect" id="node44" href="surveyresponses.html" title="surveyresponses" alt="" coords="1252,5139,1453,5227">
+<area shape="rect" id="node50" href="documents.html" title="documents" alt="" coords="1625,9408,1784,9496">
+<area shape="rect" id="node51" href="document_revisions.html" title="document_revisions" alt="" coords="1241,8283,1464,8371">
+<area shape="rect" id="node57" href="project.html" title="project" alt="" coords="1283,3252,1423,3340">
+<area shape="rect" id="node58" href="project_task.html" title="project_task" alt="" coords="901,3059,1068,3147">
+<area shape="rect" id="node60" href="fp_events.html" title="fp_events" alt="" coords="1630,7812,1779,7900">
+<area shape="rect" id="node61" href="jjwg_maps.html" title="jjwg_maps" alt="" coords="1604,7560,1805,7795">
+<area shape="rect" id="node63" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="1627,7244,1782,7332">
+<area shape="rect" id="node65" href="jjwg_markers.html" title="jjwg_markers" alt="" coords="1618,7349,1791,7437">
+<area shape="rect" id="node69" href="oauth2clients.html" title="oauth2clients" alt="" coords="1617,2271,1792,2359">
+<area shape="rect" id="node70" href="oauth2tokens.html" title="oauth2tokens" alt="" coords="1265,2355,1441,2443">
+<area shape="rect" id="node71" href="oauth_consumer.html" title="oauth_consumer" alt="" coords="1605,2480,1804,2568">
+<area shape="rect" id="node72" href="oauth_tokens.html" title="oauth_tokens" alt="" coords="1265,2471,1441,2559">
+<area shape="rect" id="node80" href="prospect_lists.html" title="prospect_lists" alt="" coords="1615,8061,1795,8149">
+<area shape="rect" id="node82" href="schedulers.html" title="schedulers" alt="" coords="1626,2621,1783,2709">
+<area shape="rect" id="node83" href="job_queue.html" title="job_queue" alt="" coords="1275,2599,1431,2687">
+<area shape="rect" id="node84" href="securitygroups.html" title="securitygroups" alt="" coords="1611,7033,1798,7121">
+<area shape="rect" id="node85" href="fp_event_locations.html" title="fp_event_locations" alt="" coords="1246,6489,1459,6577">
+<area shape="rect" id="node87" href="aok_knowledgebase.html" title="aok_knowledgebase" alt="" coords="1594,6248,1815,6336">
+<area shape="rect" id="node88" href="aos_pdf_templates.html" title="aos_pdf_templates" alt="" coords="1598,6823,1811,6911">
+<area shape="rect" id="node89" href="email_templates.html" title="email_templates" alt="" coords="1608,8668,1801,8756">
+<area shape="rect" id="node90" href="spots.html" title="spots" alt="" coords="1645,6928,1765,7016">
+<area shape="rect" id="node91" href="surveyquestionoptions.html" title="surveyquestionoptions" alt="" coords="864,5223,1105,5311">
+<area shape="rect" id="node92" href="surveyquestionresponses.html" title="surveyquestionresponses" alt="" coords="854,5049,1115,5137">
+<area shape="rect" id="node93" href="surveyquestions.html" title="surveyquestions" alt="" coords="1254,5343,1451,5431">
+<area shape="rect" id="node94" href="surveys.html" title="surveys" alt="" coords="1637,5275,1773,5363">
+<area shape="rect" id="node96" href="alerts.html" title="alerts" alt="" coords="1645,4703,1765,4791">
+<area shape="rect" id="node97" href="am_tasktemplates.html" title="am_tasktemplates" alt="" coords="1601,4808,1808,4896">
+<area shape="rect" id="node98" href="aobh_businesshours.html" title="aobh_businesshours" alt="" coords="1591,4965,1819,5053">
+<area shape="rect" id="node99" href="aod_index.html" title="aod_index" alt="" coords="1628,2727,1781,2815">
+<area shape="rect" id="node100" href="aod_indexevent.html" title="aod_indexevent" alt="" coords="1609,2832,1800,2920">
+<area shape="rect" id="node101" href="aok_knowledge_base_categories.html" title="aok_knowledge_base_categories" alt="" coords="1549,2937,1860,3025">
+<area shape="rect" id="node102" href="eapm.html" title="eapm" alt="" coords="1645,3043,1765,3131">
+<area shape="rect" id="node103" href="favorites.html" title="favorites" alt="" coords="1634,3216,1775,3304">
+<area shape="rect" id="node104" href="inbound_email.html" title="inbound_email" alt="" coords="1613,3321,1797,3409">
+<area shape="rect" id="node105" href="jjwg_address_cache.html" title="jjwg_address_cache" alt="" coords="1594,3427,1815,3515">
+<area shape="rect" id="node106" href="outbound_email.html" title="outbound_email" alt="" coords="1608,3532,1801,3620">
+<area shape="rect" id="node107" href="reminders.html" title="reminders" alt="" coords="1629,3637,1781,3725">
+<area shape="rect" id="node108" href="reminders_invitees.html" title="reminders_invitees" alt="" coords="1598,3936,1811,4024">
+<area shape="rect" id="node109" href="saved_search.html" title="saved_search" alt="" coords="1616,4041,1793,4129">
+<area shape="rect" id="node110" href="sugarfeed.html" title="sugarfeed" alt="" coords="1629,4147,1780,4235">
+<area shape="rect" id="node111" href="templatesectionline.html" title="templatesectionline" alt="" coords="1596,4252,1813,4340">
+<area shape="rect" id="node21" href="am_projecttemplates_contacts_1_c.html" title="am_projecttemplates_contacts_1_c" alt="" coords="1904,7816,2231,7904">
+<area shape="rect" id="node23" href="am_projecttemplates_users_1_c.html" title="am_projecttemplates_users_1_c" alt="" coords="2275,6593,2580,6681">
+<area shape="rect" id="node39" href="calls_contacts.html" title="calls_contacts" alt="" coords="1614,1937,1795,2025">
+<area shape="rect" id="node40" href="calls_leads.html" title="calls_leads" alt="" coords="1274,1991,1431,2079">
+<area shape="rect" id="node41" href="calls_users.html" title="calls_users" alt="" coords="2347,1937,2507,2025">
+<area shape="rect" id="node46" href="cases_bugs.html" title="cases_bugs" alt="" coords="1616,975,1793,1151">
+<area shape="rect" id="node47" href="contacts_bugs.html" title="contacts_bugs" alt="" coords="1613,5516,1797,5604">
+<area shape="rect" id="node48" href="contacts_cases.html" title="contacts_cases" alt="" coords="1610,3743,1799,3919">
+<area shape="rect" id="node49" href="contacts_users.html" title="contacts_users" alt="" coords="2333,6787,2521,6875">
+<area shape="rect" id="node52" href="documents_accounts.html" title="documents_accounts" alt="" coords="2995,9041,3225,9129">
+<area shape="rect" id="node53" href="documents_cases.html" title="documents_cases" alt="" coords="1964,7124,2171,7300">
+<area shape="rect" id="node54" href="documents_contacts.html" title="documents_contacts" alt="" coords="1954,9160,2181,9248">
+<area shape="rect" id="node55" href="email_addr_bean_rel.html" title="email_addr_bean_rel" alt="" coords="2997,7235,3223,7323">
+<area shape="rect" id="node56" href="emails_beans.html" title="emails_beans" alt="" coords="3017,1872,3203,2077">
+<area shape="rect" id="node59" href="fp_events_contacts_c.html" title="fp_events_contacts_c" alt="" coords="1951,7921,2184,8009">
+<area shape="rect" id="node62" href="jjwg_maps_jjwg_areas_c.html" title="jjwg_maps_jjwg_areas_c" alt="" coords="1941,7425,2194,7513">
+<area shape="rect" id="node64" href="jjwg_maps_jjwg_markers_c.html" title="jjwg_maps_jjwg_markers_c" alt="" coords="1931,7567,2203,7655">
+<area shape="rect" id="node66" href="meetings_contacts.html" title="meetings_contacts" alt="" coords="1598,9055,1811,9143">
+<area shape="rect" id="node67" href="meetings_leads.html" title="meetings_leads" alt="" coords="1258,9948,1447,10036">
+<area shape="rect" id="node68" href="meetings_users.html" title="meetings_users" alt="" coords="2331,9016,2523,9104">
+<area shape="rect" id="node73" href="opportunities_contacts.html" title="opportunities_contacts" alt="" coords="1583,8845,1826,8933">
+<area shape="rect" id="node74" href="project_contacts_1_c.html" title="project_contacts_1_c" alt="" coords="1590,5983,1819,6071">
+<area shape="rect" id="node75" href="project_users_1_c.html" title="project_users_1_c" alt="" coords="2323,2079,2532,2167">
+<area shape="rect" id="node76" href="projects_accounts.html" title="projects_accounts" alt="" coords="3005,1491,3215,1579">
+<area shape="rect" id="node77" href="projects_cases.html" title="projects_cases" alt="" coords="1612,1204,1797,1380">
+<area shape="rect" id="node78" href="projects_contacts.html" title="projects_contacts" alt="" coords="1602,5877,1807,5965">
+<area shape="rect" id="node79" href="prospect_lists_prospects.html" title="prospect_lists_prospects" alt="" coords="2981,6051,3239,6139">
+<area shape="rect" id="node81" href="roles_users.html" title="roles_users" alt="" coords="2346,5124,2509,5212">
+<area shape="rect" id="node86" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="2980,7816,3240,8051">
+<area shape="rect" id="node95" href="securitygroups_users.html" title="securitygroups_users" alt="" coords="2311,6419,2544,6507">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/cases.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

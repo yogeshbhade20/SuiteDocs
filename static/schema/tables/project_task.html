@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>project_task - suitecrm Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>suitecrm</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>project_task</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="emails_beans.bean_id references project_task.id">
+						<a href='emails_beans.html'>emails_beans</a><span class='relatedKey'>.bean_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references project_task.id">
+						<a href='securitygroups_records.html'>securitygroups_records</a><span class='relatedKey'>.record_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="project_task.id references calls.parent_id">
+						<a href='calls.html'>calls</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="project_task.id references emails.parent_id">
+						<a href='emails.html'>emails</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="project_task.id references tasks.parent_id">
+						<a href='tasks.html'>tasks</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="project_task.id references notes.parent_id">
+						<a href='notes.html'>notes</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="project_task.id references meetings.parent_id">
+						<a href='meetings.html'>meetings</a><span class='relatedKey'>.parent_id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_entered">date_entered</span></td>
+				 <td>DATETIME</td>
+				 <td>26</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_modified">date_modified</span></td>
+				 <td>DATETIME</td>
+				 <td>26</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="project_id">project_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="project.id references project_task.project_id">
+						<a href='project.html'>project</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="project_task_id">project_task_id</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="project_task.project_task_id&#39;s name implies that it&#39;s a child of tracker.id, but it doesn&#39;t reference that column.">
+						<a href='tracker.html'>tracker</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="name">name</span></td>
+				 <td>VARCHAR</td>
+				 <td>50</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="status">status</span></td>
+				 <td>VARCHAR</td>
+				 <td>255</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="relationship_type">relationship_type</span></td>
+				 <td>VARCHAR</td>
+				 <td>255</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="description">description</span></td>
+				 <td>TEXT</td>
+				 <td>65535</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="predecessors">predecessors</span></td>
+				 <td>TEXT</td>
+				 <td>65535</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_start">date_start</span></td>
+				 <td>DATE</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="time_start">time_start</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="time_finish">time_finish</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_finish">date_finish</span></td>
+				 <td>DATE</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="duration">duration</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="duration_unit">duration_unit</span></td>
+				 <td>TEXT</td>
+				 <td>65535</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="actual_duration">actual_duration</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="percent_complete">percent_complete</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_due">date_due</span></td>
+				 <td>DATE</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="time_due">time_due</span></td>
+				 <td>TIME</td>
+				 <td>16</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="parent_task_id">parent_task_id</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="project_task.parent_task_id&#39;s name implies that it&#39;s a child of tracker.id, but it doesn&#39;t reference that column.">
+						<a href='tracker.html'>tracker</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="assigned_user_id">assigned_user_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="users.id references project_task.assigned_user_id">
+						<a href='users.html'>users</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="modified_user_id">modified_user_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="users.id references project_task.modified_user_id">
+						<a href='users.html'>users</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="priority">priority</span></td>
+				 <td>VARCHAR</td>
+				 <td>255</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="created_by">created_by</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="users.id references project_task.created_by">
+						<a href='users.html'>users</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="milestone_flag">milestone_flag</span></td>
+				 <td>BIT</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="order_number">order_number</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>1</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="task_number">task_number</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="estimated_effort">estimated_effort</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="actual_effort">actual_effort</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="deleted">deleted</span></td>
+				 <td>BIT</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>0</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="utilization">utilization</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>100</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='32 columns'>Table contained <span id="recordNumber">6</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>id</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="calls.html" title="calls" alt="" coords="532,312,769,693">
+<area shape="rect" id="node2" href="notes.html" title="notes" alt="" coords="5,213,207,565">
+<area shape="rect" id="node3" href="emails.html" title="emails" alt="" coords="550,782,751,1164">
+<area shape="rect" id="node4" href="meetings.html" title="meetings" alt="" coords="251,204,488,585">
+<area shape="rect" id="node5" href="emails_beans.html" title="emails_beans" alt="" coords="1829,604,2015,809">
+<area shape="rect" id="node6" href="project.html" title="project" alt="" coords="1161,600,1432,805">
+<area shape="rect" id="node7" href="project_task.html" title="project_task" alt="" coords="813,930,1117,1938">
+<area shape="rect" id="node8" href="tasks.html" title="tasks" alt="" coords="550,1849,751,2230">
+<area shape="rect" id="node9" href="users.html" title="users" alt="" coords="1476,662,1785,956">
+<area shape="rect" id="node10" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1501,285,1761,520">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/project_task.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="2540,1980,2688,2068">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="875,1915,1055,2003">
+<area shape="rect" id="node3" href="aos_invoices.html" title="aos_invoices" alt="" coords="879,757,1051,845">
+<area shape="rect" id="node4" href="aos_quotes.html" title="aos_quotes" alt="" coords="885,863,1046,951">
+<area shape="rect" id="node5" href="calls.html" title="calls" alt="" coords="532,2655,769,3036">
+<area shape="rect" id="node6" href="campaign_log.html" title="campaign_log" alt="" coords="2254,1909,2433,1997">
+<area shape="rect" id="node7" href="cases.html" title="cases" alt="" coords="895,2369,1035,2457">
+<area shape="rect" id="node8" href="emails.html" title="emails" alt="" coords="550,7161,751,7543">
+<area shape="rect" id="node9" href="leads.html" title="leads" alt="" coords="895,2920,1035,3008">
+<area shape="rect" id="node10" href="meetings.html" title="meetings" alt="" coords="251,5901,488,6283">
+<area shape="rect" id="node11" href="notes.html" title="notes" alt="" coords="5,2171,207,2523">
+<area shape="rect" id="node12" href="tasks.html" title="tasks" alt="" coords="550,2007,751,2388">
+<area shape="rect" id="node25" href="aos_line_item_groups.html" title="aos_line_item_groups" alt="" coords="533,983,768,1071">
+<area shape="rect" id="node26" href="aos_products_quotes.html" title="aos_products_quotes" alt="" coords="253,1175,486,1263">
+<area shape="rect" id="node35" href="calls_reschedule.html" title="calls_reschedule" alt="" coords="271,8817,468,8905">
+<area shape="rect" id="node14" href="users.html" title="users" alt="" coords="1834,5097,2143,5391">
+<area shape="rect" id="node37" href="contacts.html" title="contacts" alt="" coords="1223,1043,1371,1131">
+<area shape="rect" id="node40" href="opportunities.html" title="opportunities" alt="" coords="1209,2459,1384,2547">
+<area shape="rect" id="node19" href="aop_case_updates.html" title="aop_case_updates" alt="" coords="545,695,756,783">
+<area shape="rect" id="node44" href="aop_case_events.html" title="aop_case_events" alt="" coords="550,2405,751,2493">
+<area shape="rect" id="node13" href="acl_roles_users.html" title="acl_roles_users" alt="" coords="2248,5016,2439,5104">
+<area shape="rect" id="node16" href="am_projecttemplates.html" title="am_projecttemplates" alt="" coords="1518,8621,1745,8709">
+<area shape="rect" id="node17" href="project.html" title="project" alt="" coords="1161,7519,1432,7724">
+<area shape="rect" id="node20" href="aor_reports.html" title="aor_reports" alt="" coords="1550,7057,1713,7145">
+<area shape="rect" id="node21" href="aor_charts.html" title="aor_charts" alt="" coords="1219,6608,1375,6696">
+<area shape="rect" id="node22" href="aor_conditions.html" title="aor_conditions" alt="" coords="1204,6713,1389,6801">
+<area shape="rect" id="node23" href="aor_fields.html" title="aor_fields" alt="" coords="1222,7145,1371,7233">
+<area shape="rect" id="node24" href="aor_scheduled_reports.html" title="aor_scheduled_reports" alt="" coords="1175,5131,1418,5219">
+<area shape="rect" id="node27" href="aos_product_categories.html" title="aos_product_categories" alt="" coords="1507,2407,1756,2495">
+<area shape="rect" id="node28" href="aos_products.html" title="aos_products" alt="" coords="1208,2005,1385,2093">
+<area shape="rect" id="node30" href="aow_workflow.html" title="aow_workflow" alt="" coords="1541,6231,1721,6319">
+<area shape="rect" id="node31" href="aow_actions.html" title="aow_actions" alt="" coords="1213,5447,1381,5535">
+<area shape="rect" id="node32" href="aow_conditions.html" title="aow_conditions" alt="" coords="1201,5588,1392,5676">
+<area shape="rect" id="node33" href="aow_processed.html" title="aow_processed" alt="" coords="1202,6319,1391,6407">
+<area shape="rect" id="node34" href="bugs.html" title="bugs" alt="" coords="1227,5236,1367,5324">
+<area shape="rect" id="node41" href="campaigns.html" title="campaigns" alt="" coords="1553,2193,1710,2281">
+<area shape="rect" id="node42" href="prospects.html" title="prospects" alt="" coords="1221,3065,1372,3153">
+<area shape="rect" id="node43" href="surveyresponses.html" title="surveyresponses" alt="" coords="1196,7413,1397,7501">
+<area shape="rect" id="node46" href="documents.html" title="documents" alt="" coords="1552,6532,1711,6620">
+<area shape="rect" id="node47" href="document_revisions.html" title="document_revisions" alt="" coords="1185,6499,1408,6587">
+<area shape="rect" id="node50" href="project_task.html" title="project_task" alt="" coords="813,7632,1117,8640">
+<area shape="rect" id="node51" href="jjwg_maps.html" title="jjwg_maps" alt="" coords="1554,3065,1709,3153">
+<area shape="rect" id="node55" href="oauth2clients.html" title="oauth2clients" alt="" coords="1544,5325,1719,5413">
+<area shape="rect" id="node56" href="oauth2tokens.html" title="oauth2tokens" alt="" coords="1209,5341,1385,5429">
+<area shape="rect" id="node57" href="oauth_consumer.html" title="oauth_consumer" alt="" coords="1532,5675,1731,5763">
+<area shape="rect" id="node58" href="oauth_tokens.html" title="oauth_tokens" alt="" coords="1209,5693,1385,5781">
+<area shape="rect" id="node67" href="prospect_lists.html" title="prospect_lists" alt="" coords="1541,8979,1721,9067">
+<area shape="rect" id="node69" href="schedulers.html" title="schedulers" alt="" coords="1553,6089,1710,6177">
+<area shape="rect" id="node70" href="job_queue.html" title="job_queue" alt="" coords="1219,6205,1375,6293">
+<area shape="rect" id="node71" href="securitygroups.html" title="securitygroups" alt="" coords="1538,6847,1725,6935">
+<area shape="rect" id="node72" href="fp_event_locations.html" title="fp_event_locations" alt="" coords="1190,5799,1403,5887">
+<area shape="rect" id="node74" href="aok_knowledgebase.html" title="aok_knowledgebase" alt="" coords="1521,8200,1742,8288">
+<area shape="rect" id="node75" href="aos_pdf_templates.html" title="aos_pdf_templates" alt="" coords="1525,8305,1738,8393">
+<area shape="rect" id="node76" href="email_templates.html" title="email_templates" alt="" coords="1535,9084,1728,9172">
+<area shape="rect" id="node77" href="fp_events.html" title="fp_events" alt="" coords="1557,8411,1706,8499">
+<area shape="rect" id="node78" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="1554,8516,1709,8604">
+<area shape="rect" id="node79" href="jjwg_markers.html" title="jjwg_markers" alt="" coords="1545,7989,1718,8077">
+<area shape="rect" id="node80" href="spots.html" title="spots" alt="" coords="1571,8095,1691,8183">
+<area shape="rect" id="node81" href="surveyquestionoptions.html" title="surveyquestionoptions" alt="" coords="845,6184,1086,6272">
+<area shape="rect" id="node82" href="surveyquestionresponses.html" title="surveyquestionresponses" alt="" coords="835,7343,1096,7431">
+<area shape="rect" id="node83" href="surveyquestions.html" title="surveyquestions" alt="" coords="1198,6092,1395,6180">
+<area shape="rect" id="node84" href="surveys.html" title="surveys" alt="" coords="1563,7391,1699,7479">
+<area shape="rect" id="node86" href="alerts.html" title="alerts" alt="" coords="1571,4784,1691,4872">
+<area shape="rect" id="node87" href="am_tasktemplates.html" title="am_tasktemplates" alt="" coords="1528,4995,1735,5083">
+<area shape="rect" id="node88" href="aobh_businesshours.html" title="aobh_businesshours" alt="" coords="1517,5100,1745,5188">
+<area shape="rect" id="node89" href="aod_index.html" title="aod_index" alt="" coords="1555,3347,1708,3435">
+<area shape="rect" id="node90" href="aod_indexevent.html" title="aod_indexevent" alt="" coords="1536,3452,1727,3540">
+<area shape="rect" id="node91" href="aok_knowledge_base_categories.html" title="aok_knowledge_base_categories" alt="" coords="1476,3557,1787,3645">
+<area shape="rect" id="node92" href="eapm.html" title="eapm" alt="" coords="1571,3663,1691,3751">
+<area shape="rect" id="node93" href="favorites.html" title="favorites" alt="" coords="1561,3768,1702,3856">
+<area shape="rect" id="node94" href="inbound_email.html" title="inbound_email" alt="" coords="1539,3873,1723,3961">
+<area shape="rect" id="node95" href="jjwg_address_cache.html" title="jjwg_address_cache" alt="" coords="1521,3979,1742,4067">
+<area shape="rect" id="node96" href="outbound_email.html" title="outbound_email" alt="" coords="1535,4084,1728,4172">
+<area shape="rect" id="node97" href="reminders.html" title="reminders" alt="" coords="1555,4189,1707,4277">
+<area shape="rect" id="node98" href="reminders_invitees.html" title="reminders_invitees" alt="" coords="1525,4295,1738,4383">
+<area shape="rect" id="node99" href="saved_search.html" title="saved_search" alt="" coords="1543,4400,1720,4488">
+<area shape="rect" id="node100" href="sugarfeed.html" title="sugarfeed" alt="" coords="1556,4505,1707,4593">
+<area shape="rect" id="node101" href="templatesectionline.html" title="templatesectionline" alt="" coords="1523,4611,1740,4699">
+<area shape="rect" id="node15" href="am_projecttemplates_project_1_c.html" title="am_projecttemplates_project_1_c" alt="" coords="1831,8640,2147,8728">
+<area shape="rect" id="node18" href="am_projecttemplates_users_1_c.html" title="am_projecttemplates_users_1_c" alt="" coords="2191,6575,2496,6663">
+<area shape="rect" id="node29" href="aos_quotes_project_c.html" title="aos_quotes_project_c" alt="" coords="1514,2824,1749,2912">
+<area shape="rect" id="node36" href="calls_contacts.html" title="calls_contacts" alt="" coords="1541,1192,1722,1280">
+<area shape="rect" id="node38" href="calls_leads.html" title="calls_leads" alt="" coords="1218,2636,1375,2724">
+<area shape="rect" id="node39" href="calls_users.html" title="calls_users" alt="" coords="2263,2267,2423,2355">
+<area shape="rect" id="node45" href="contacts_users.html" title="contacts_users" alt="" coords="2249,2161,2437,2249">
+<area shape="rect" id="node48" href="email_addr_bean_rel.html" title="email_addr_bean_rel" alt="" coords="2749,385,2975,473">
+<area shape="rect" id="node49" href="emails_beans.html" title="emails_beans" alt="" coords="2769,1451,2955,1656">
+<area shape="rect" id="node52" href="meetings_contacts.html" title="meetings_contacts" alt="" coords="1525,1087,1738,1175">
+<area shape="rect" id="node53" href="meetings_leads.html" title="meetings_leads" alt="" coords="1202,5904,1391,5992">
+<area shape="rect" id="node54" href="meetings_users.html" title="meetings_users" alt="" coords="2247,8219,2439,8307">
+<area shape="rect" id="node59" href="project_contacts_1_c.html" title="project_contacts_1_c" alt="" coords="1517,5916,1746,6004">
+<area shape="rect" id="node60" href="project_users_1_c.html" title="project_users_1_c" alt="" coords="2239,6989,2448,7077">
+<area shape="rect" id="node61" href="projects_accounts.html" title="projects_accounts" alt="" coords="2757,8256,2967,8344">
+<area shape="rect" id="node62" href="projects_bugs.html" title="projects_bugs" alt="" coords="1541,7496,1722,7584">
+<area shape="rect" id="node63" href="projects_cases.html" title="projects_cases" alt="" coords="1539,6952,1724,7040">
+<area shape="rect" id="node64" href="projects_contacts.html" title="projects_contacts" alt="" coords="1529,4889,1734,4977">
+<area shape="rect" id="node65" href="projects_opportunities.html" title="projects_opportunities" alt="" coords="1511,6741,1751,6829">
+<area shape="rect" id="node66" href="prospect_lists_prospects.html" title="prospect_lists_prospects" alt="" coords="2733,2425,2991,2513">
+<area shape="rect" id="node68" href="roles_users.html" title="roles_users" alt="" coords="2262,4911,2425,4999">
+<area shape="rect" id="node73" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="2732,6512,2992,6747">
+<area shape="rect" id="node85" href="securitygroups_users.html" title="securitygroups_users" alt="" coords="2227,5639,2460,5727">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/project_task.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="calls.html" title="calls" alt="" coords="532,729,769,1111">
+<area shape="rect" id="node2" href="notes.html" title="notes" alt="" coords="5,299,207,651">
+<area shape="rect" id="node3" href="emails.html" title="emails" alt="" coords="550,259,751,640">
+<area shape="rect" id="node4" href="meetings.html" title="meetings" alt="" coords="251,295,488,676">
+<area shape="rect" id="node5" href="emails_beans.html" title="emails_beans" alt="" coords="1829,673,2015,879">
+<area shape="rect" id="node6" href="project.html" title="project" alt="" coords="1161,609,1432,815">
+<area shape="rect" id="node7" href="project_task.html" title="project_task" alt="" coords="813,753,1117,1761">
+<area shape="rect" id="node8" href="tasks.html" title="tasks" alt="" coords="550,1560,751,1941">
+<area shape="rect" id="node9" href="users.html" title="users" alt="" coords="1476,461,1785,755">
+<area shape="rect" id="node10" href="tracker.html" title="tracker" alt="" coords="560,1239,741,1503">
+<area shape="rect" id="node11" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1501,877,1761,1112">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/project_task.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="2540,7732,2688,7820">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="875,3534,1055,3622">
+<area shape="rect" id="node3" href="aos_invoices.html" title="aos_invoices" alt="" coords="879,2673,1051,2761">
+<area shape="rect" id="node4" href="aos_quotes.html" title="aos_quotes" alt="" coords="885,2492,1046,2580">
+<area shape="rect" id="node5" href="calls.html" title="calls" alt="" coords="532,3644,769,4025">
+<area shape="rect" id="node6" href="campaign_log.html" title="campaign_log" alt="" coords="2254,8194,2433,8282">
+<area shape="rect" id="node7" href="cases.html" title="cases" alt="" coords="895,6944,1035,7032">
+<area shape="rect" id="node8" href="emails.html" title="emails" alt="" coords="550,6598,751,6980">
+<area shape="rect" id="node9" href="leads.html" title="leads" alt="" coords="895,7858,1035,7946">
+<area shape="rect" id="node10" href="meetings.html" title="meetings" alt="" coords="251,8524,488,8905">
+<area shape="rect" id="node11" href="notes.html" title="notes" alt="" coords="5,6668,207,7020">
+<area shape="rect" id="node12" href="tasks.html" title="tasks" alt="" coords="550,7157,751,7538">
+<area shape="rect" id="node25" href="aos_line_item_groups.html" title="aos_line_item_groups" alt="" coords="533,2402,768,2490">
+<area shape="rect" id="node26" href="aos_products_quotes.html" title="aos_products_quotes" alt="" coords="253,2282,486,2370">
+<area shape="rect" id="node35" href="calls_reschedule.html" title="calls_reschedule" alt="" coords="271,1165,468,1253">
+<area shape="rect" id="node14" href="users.html" title="users" alt="" coords="1834,3832,2143,4125">
+<area shape="rect" id="node37" href="contacts.html" title="contacts" alt="" coords="1223,7276,1371,7364">
+<area shape="rect" id="node40" href="opportunities.html" title="opportunities" alt="" coords="1209,6836,1384,6924">
+<area shape="rect" id="node19" href="aop_case_updates.html" title="aop_case_updates" alt="" coords="545,8966,756,9054">
+<area shape="rect" id="node44" href="aop_case_events.html" title="aop_case_events" alt="" coords="550,1244,751,1332">
+<area shape="rect" id="node13" href="acl_roles_users.html" title="acl_roles_users" alt="" coords="2248,3886,2439,3974">
+<area shape="rect" id="node16" href="am_projecttemplates.html" title="am_projecttemplates" alt="" coords="1518,857,1745,945">
+<area shape="rect" id="node17" href="project.html" title="project" alt="" coords="1161,6224,1432,6429">
+<area shape="rect" id="node20" href="aor_reports.html" title="aor_reports" alt="" coords="1550,2781,1713,2869">
+<area shape="rect" id="node21" href="aor_charts.html" title="aor_charts" alt="" coords="1219,2665,1375,2753">
+<area shape="rect" id="node22" href="aor_conditions.html" title="aor_conditions" alt="" coords="1204,2838,1389,2926">
+<area shape="rect" id="node23" href="aor_fields.html" title="aor_fields" alt="" coords="1222,2944,1371,3032">
+<area shape="rect" id="node24" href="aor_scheduled_reports.html" title="aor_scheduled_reports" alt="" coords="1175,3085,1418,3173">
+<area shape="rect" id="node27" href="aos_product_categories.html" title="aos_product_categories" alt="" coords="1507,1034,1756,1122">
+<area shape="rect" id="node28" href="aos_products.html" title="aos_products" alt="" coords="1208,2077,1385,2165">
+<area shape="rect" id="node30" href="aow_workflow.html" title="aow_workflow" alt="" coords="1541,3272,1721,3360">
+<area shape="rect" id="node31" href="aow_actions.html" title="aow_actions" alt="" coords="1213,3190,1381,3278">
+<area shape="rect" id="node32" href="aow_conditions.html" title="aow_conditions" alt="" coords="1201,3332,1392,3420">
+<area shape="rect" id="node33" href="aow_processed.html" title="aow_processed" alt="" coords="1202,3473,1391,3561">
+<area shape="rect" id="node34" href="bugs.html" title="bugs" alt="" coords="1227,7561,1367,7649">
+<area shape="rect" id="node41" href="campaigns.html" title="campaigns" alt="" coords="1553,7806,1710,7894">
+<area shape="rect" id="node42" href="prospects.html" title="prospects" alt="" coords="1221,8592,1372,8680">
+<area shape="rect" id="node43" href="surveyresponses.html" title="surveyresponses" alt="" coords="1196,2250,1397,2338">
+<area shape="rect" id="node46" href="documents.html" title="documents" alt="" coords="1552,3517,1711,3605">
+<area shape="rect" id="node47" href="document_revisions.html" title="document_revisions" alt="" coords="1185,3578,1408,3666">
+<area shape="rect" id="node50" href="project_task.html" title="project_task" alt="" coords="813,4020,1117,5028">
+<area shape="rect" id="node51" href="jjwg_maps.html" title="jjwg_maps" alt="" coords="1554,7633,1709,7721">
+<area shape="rect" id="node55" href="oauth2clients.html" title="oauth2clients" alt="" coords="1544,3870,1719,3958">
+<area shape="rect" id="node56" href="oauth2tokens.html" title="oauth2tokens" alt="" coords="1209,3954,1385,4042">
+<area shape="rect" id="node57" href="oauth_consumer.html" title="oauth_consumer" alt="" coords="1532,4044,1731,4132">
+<area shape="rect" id="node58" href="oauth_tokens.html" title="oauth_tokens" alt="" coords="1209,4085,1385,4173">
+<area shape="rect" id="node68" href="prospect_lists.html" title="prospect_lists" alt="" coords="1541,7246,1721,7334">
+<area shape="rect" id="node70" href="schedulers.html" title="schedulers" alt="" coords="1553,4221,1710,4309">
+<area shape="rect" id="node71" href="job_queue.html" title="job_queue" alt="" coords="1219,4206,1375,4294">
+<area shape="rect" id="node72" href="securitygroups.html" title="securitygroups" alt="" coords="1538,752,1725,840">
+<area shape="rect" id="node73" href="fp_event_locations.html" title="fp_event_locations" alt="" coords="1190,2560,1403,2648">
+<area shape="rect" id="node75" href="aok_knowledgebase.html" title="aok_knowledgebase" alt="" coords="1521,1944,1742,2032">
+<area shape="rect" id="node76" href="aos_pdf_templates.html" title="aos_pdf_templates" alt="" coords="1525,1417,1738,1505">
+<area shape="rect" id="node77" href="email_templates.html" title="email_templates" alt="" coords="1535,646,1728,734">
+<area shape="rect" id="node78" href="fp_events.html" title="fp_events" alt="" coords="1557,1522,1706,1610">
+<area shape="rect" id="node79" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="1554,1628,1709,1716">
+<area shape="rect" id="node80" href="jjwg_markers.html" title="jjwg_markers" alt="" coords="1545,1733,1718,1821">
+<area shape="rect" id="node81" href="spots.html" title="spots" alt="" coords="1571,1838,1691,1926">
+<area shape="rect" id="node82" href="surveyquestionoptions.html" title="surveyquestionoptions" alt="" coords="845,1988,1086,2076">
+<area shape="rect" id="node83" href="surveyquestionresponses.html" title="surveyquestionresponses" alt="" coords="835,2318,1096,2406">
+<area shape="rect" id="node84" href="surveyquestions.html" title="surveyquestions" alt="" coords="1198,1904,1395,1992">
+<area shape="rect" id="node85" href="surveys.html" title="surveys" alt="" coords="1563,1312,1699,1400">
+<area shape="rect" id="node87" href="alerts.html" title="alerts" alt="" coords="1571,4434,1691,4522">
+<area shape="rect" id="node88" href="am_tasktemplates.html" title="am_tasktemplates" alt="" coords="1528,4540,1735,4628">
+<area shape="rect" id="node89" href="aobh_businesshours.html" title="aobh_businesshours" alt="" coords="1517,4645,1745,4733">
+<area shape="rect" id="node90" href="aod_index.html" title="aod_index" alt="" coords="1555,4750,1708,4838">
+<area shape="rect" id="node91" href="aod_indexevent.html" title="aod_indexevent" alt="" coords="1536,4856,1727,4944">
+<area shape="rect" id="node92" href="aok_knowledge_base_categories.html" title="aok_knowledge_base_categories" alt="" coords="1476,4961,1787,5049">
+<area shape="rect" id="node93" href="eapm.html" title="eapm" alt="" coords="1571,5066,1691,5154">
+<area shape="rect" id="node94" href="favorites.html" title="favorites" alt="" coords="1561,5172,1702,5260">
+<area shape="rect" id="node95" href="inbound_email.html" title="inbound_email" alt="" coords="1539,5277,1723,5365">
+<area shape="rect" id="node96" href="jjwg_address_cache.html" title="jjwg_address_cache" alt="" coords="1521,5382,1742,5470">
+<area shape="rect" id="node97" href="outbound_email.html" title="outbound_email" alt="" coords="1535,5488,1728,5576">
+<area shape="rect" id="node98" href="reminders.html" title="reminders" alt="" coords="1555,5593,1707,5681">
+<area shape="rect" id="node99" href="reminders_invitees.html" title="reminders_invitees" alt="" coords="1525,5698,1738,5786">
+<area shape="rect" id="node100" href="saved_search.html" title="saved_search" alt="" coords="1543,5804,1720,5892">
+<area shape="rect" id="node101" href="sugarfeed.html" title="sugarfeed" alt="" coords="1556,5909,1707,5997">
+<area shape="rect" id="node102" href="templatesectionline.html" title="templatesectionline" alt="" coords="1523,6014,1740,6102">
+<area shape="rect" id="node15" href="am_projecttemplates_project_1_c.html" title="am_projecttemplates_project_1_c" alt="" coords="1831,1177,2147,1265">
+<area shape="rect" id="node18" href="am_projecttemplates_users_1_c.html" title="am_projecttemplates_users_1_c" alt="" coords="2191,2504,2496,2592">
+<area shape="rect" id="node29" href="aos_quotes_project_c.html" title="aos_quotes_project_c" alt="" coords="1514,3130,1749,3218">
+<area shape="rect" id="node36" href="calls_contacts.html" title="calls_contacts" alt="" coords="1541,7037,1722,7125">
+<area shape="rect" id="node38" href="calls_leads.html" title="calls_leads" alt="" coords="1218,7666,1375,7754">
+<area shape="rect" id="node39" href="calls_users.html" title="calls_users" alt="" coords="2263,1105,2423,1193">
+<area shape="rect" id="node45" href="contacts_users.html" title="contacts_users" alt="" coords="2249,7166,2437,7254">
+<area shape="rect" id="node48" href="email_addr_bean_rel.html" title="email_addr_bean_rel" alt="" coords="2749,8768,2975,8856">
+<area shape="rect" id="node49" href="emails_beans.html" title="emails_beans" alt="" coords="2769,7670,2955,7876">
+<area shape="rect" id="node60" href="tracker.html" title="tracker" alt="" coords="560,4550,741,4814">
+<area shape="rect" id="node52" href="meetings_contacts.html" title="meetings_contacts" alt="" coords="1525,8520,1738,8608">
+<area shape="rect" id="node53" href="meetings_leads.html" title="meetings_leads" alt="" coords="1202,8841,1391,8929">
+<area shape="rect" id="node54" href="meetings_users.html" title="meetings_users" alt="" coords="2247,8376,2439,8464">
+<area shape="rect" id="node59" href="project_contacts_1_c.html" title="project_contacts_1_c" alt="" coords="1517,6824,1746,6912">
+<area shape="rect" id="node61" href="project_users_1_c.html" title="project_users_1_c" alt="" coords="2239,6192,2448,6280">
+<area shape="rect" id="node62" href="projects_accounts.html" title="projects_accounts" alt="" coords="2757,7446,2967,7534">
+<area shape="rect" id="node63" href="projects_bugs.html" title="projects_bugs" alt="" coords="1541,7388,1722,7476">
+<area shape="rect" id="node64" href="projects_cases.html" title="projects_cases" alt="" coords="1539,6300,1724,6388">
+<area shape="rect" id="node65" href="projects_contacts.html" title="projects_contacts" alt="" coords="1529,6510,1734,6598">
+<area shape="rect" id="node66" href="projects_opportunities.html" title="projects_opportunities" alt="" coords="1511,6405,1751,6493">
+<area shape="rect" id="node67" href="prospect_lists_prospects.html" title="prospect_lists_prospects" alt="" coords="2733,8981,2991,9069">
+<area shape="rect" id="node69" href="roles_users.html" title="roles_users" alt="" coords="2262,3781,2425,3869">
+<area shape="rect" id="node74" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="2732,1041,2992,1276">
+<area shape="rect" id="node86" href="securitygroups_users.html" title="securitygroups_users" alt="" coords="2227,3129,2460,3217">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/project_task.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

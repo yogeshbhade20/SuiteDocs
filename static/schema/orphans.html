@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>suitecrm Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="bower/html5shiv/html5shiv.min.js"></script>
+  <script src="bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand"><b>suitecrm</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="components.html" title="List of system components">Components</a></li>-->
+			<li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>Utility Tables</h1>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+              <h3 class="box-title">Orphan Tables</h3>
+            </div>			
+            <div class="box-body">
+			<div id="grid" data-columns>
+				<div class="item">
+					<img src='diagrams/orphans/aos_contracts_cstm.1degree.png' usemap='#aos_contracts_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/email_templates_cstm.1degree.png' usemap='#email_templates_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/inbound_email_cache_ts.1degree.png' usemap='#inbound_email_cache_ts' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/address_book.1degree.png' usemap='#address_book' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/config.1degree.png' usemap='#config' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/folders_subscriptions.1degree.png' usemap='#folders_subscriptions' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/oauth_nonce.1degree.png' usemap='#oauth_nonce' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/cron_remove_documents.1degree.png' usemap='#cron_remove_documents' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/users_password_link.1degree.png' usemap='#users_password_link' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/accounts_cases.1degree.png' usemap='#accounts_cases' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/accounts_cstm.1degree.png' usemap='#accounts_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/cases_cstm.1degree.png' usemap='#cases_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/emails_email_addr_rel.1degree.png' usemap='#emails_email_addr_rel' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/folders_rel.1degree.png' usemap='#folders_rel' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/fp_events_fp_event_delegates_1_c.1degree.png' usemap='#fp_events_fp_event_delegates_1_c' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/leads_cstm.1degree.png' usemap='#leads_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/meetings_cstm.1degree.png' usemap='#meetings_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/opportunities_cstm.1degree.png' usemap='#opportunities_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/project_cstm.1degree.png' usemap='#project_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/projects_products.1degree.png' usemap='#projects_products' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/prospects_cstm.1degree.png' usemap='#prospects_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/securitygroups_default.1degree.png' usemap='#securitygroups_default' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/users_feeds.1degree.png' usemap='#users_feeds' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/inbound_email_autoreply.1degree.png' usemap='#inbound_email_autoreply' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/roles_modules.1degree.png' usemap='#roles_modules' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/users_last_import.1degree.png' usemap='#users_last_import' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/user_preferences.1degree.png' usemap='#user_preferences' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/users_signatures.1degree.png' usemap='#users_signatures' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/vcals.1degree.png' usemap='#vcals' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/accounts_audit.1degree.png' usemap='#accounts_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/am_projecttemplates_audit.1degree.png' usemap='#am_projecttemplates_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/am_tasktemplates_audit.1degree.png' usemap='#am_tasktemplates_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aod_index_audit.1degree.png' usemap='#aod_index_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aod_indexevent_audit.1degree.png' usemap='#aod_indexevent_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aok_knowledge_base_categories_audit.1degree.png' usemap='#aok_knowledge_base_categories_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aok_knowledgebase_audit.1degree.png' usemap='#aok_knowledgebase_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aop_case_events_audit.1degree.png' usemap='#aop_case_events_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aop_case_updates_audit.1degree.png' usemap='#aop_case_updates_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aor_reports_audit.1degree.png' usemap='#aor_reports_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aos_contracts_audit.1degree.png' usemap='#aos_contracts_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aos_invoices_audit.1degree.png' usemap='#aos_invoices_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aos_line_item_groups_audit.1degree.png' usemap='#aos_line_item_groups_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aos_pdf_templates_audit.1degree.png' usemap='#aos_pdf_templates_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aos_product_categories_audit.1degree.png' usemap='#aos_product_categories_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aos_products_audit.1degree.png' usemap='#aos_products_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aos_products_quotes_audit.1degree.png' usemap='#aos_products_quotes_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aos_quotes_audit.1degree.png' usemap='#aos_quotes_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/aow_workflow_audit.1degree.png' usemap='#aow_workflow_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/bugs_audit.1degree.png' usemap='#bugs_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/calls_reschedule_audit.1degree.png' usemap='#calls_reschedule_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/campaigns_audit.1degree.png' usemap='#campaigns_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/cases_audit.1degree.png' usemap='#cases_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/contacts_audit.1degree.png' usemap='#contacts_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/contacts_cstm.1degree.png' usemap='#contacts_cstm' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/email_addresses_audit.1degree.png' usemap='#email_addresses_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/emails_text.1degree.png' usemap='#emails_text' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/fp_event_locations_audit.1degree.png' usemap='#fp_event_locations_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/fp_events_audit.1degree.png' usemap='#fp_events_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/jjwg_address_cache_audit.1degree.png' usemap='#jjwg_address_cache_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/jjwg_areas_audit.1degree.png' usemap='#jjwg_areas_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/jjwg_maps_audit.1degree.png' usemap='#jjwg_maps_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/jjwg_markers_audit.1degree.png' usemap='#jjwg_markers_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/leads_audit.1degree.png' usemap='#leads_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/opportunities_audit.1degree.png' usemap='#opportunities_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/outbound_email_audit.1degree.png' usemap='#outbound_email_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/project_task_audit.1degree.png' usemap='#project_task_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/securitygroups_audit.1degree.png' usemap='#securitygroups_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/surveyquestionoptions_audit.1degree.png' usemap='#surveyquestionoptions_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/surveyquestionresponses_audit.1degree.png' usemap='#surveyquestionresponses_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/surveyquestions_audit.1degree.png' usemap='#surveyquestions_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/surveyresponses_audit.1degree.png' usemap='#surveyresponses_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/surveys_audit.1degree.png' usemap='#surveys_audit' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/tracker.1degree.png' usemap='#tracker' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/folders.1degree.png' usemap='#folders' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/upgrade_history.1degree.png' usemap='#upgrade_history' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/custom_fields.1degree.png' usemap='#custom_fields' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/import_maps.1degree.png' usemap='#import_maps' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/email_cache.1degree.png' usemap='#email_cache' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/relationships.1degree.png' usemap='#relationships' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/fields_meta_data.1degree.png' usemap='#fields_meta_data' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+			</div>
+			<map id="aos_contracts_cstm" name="aos_contracts_cstm">
+<area shape="rect" id="node1" href="tables/aos_contracts_cstm.html" title="aos_contracts_cstm" alt="" coords="5,5,229,128">
+</map>
+<map id="email_templates_cstm" name="email_templates_cstm">
+<area shape="rect" id="node1" href="tables/email_templates_cstm.html" title="email_templates_cstm" alt="" coords="5,5,253,128">
+</map>
+<map id="inbound_email_cache_ts" name="inbound_email_cache_ts">
+<area shape="rect" id="node1" href="tables/inbound_email_cache_ts.html" title="inbound_email_cache_ts" alt="" coords="5,5,271,128">
+</map>
+<map id="address_book" name="address_book">
+<area shape="rect" id="node1" href="tables/address_book.html" title="address_book" alt="" coords="5,5,207,157">
+</map>
+<map id="config" name="config">
+<area shape="rect" id="node1" href="tables/config.html" title="config" alt="" coords="5,5,133,157">
+</map>
+<map id="folders_subscriptions" name="folders_subscriptions">
+<area shape="rect" id="node1" href="tables/folders_subscriptions.html" title="folders_subscriptions" alt="" coords="5,5,247,157">
+</map>
+<map id="oauth_nonce" name="oauth_nonce">
+<area shape="rect" id="node1" href="tables/oauth_nonce.html" title="oauth_nonce" alt="" coords="5,5,177,157">
+</map>
+<map id="cron_remove_documents" name="cron_remove_documents">
+<area shape="rect" id="node1" href="tables/cron_remove_documents.html" title="cron_remove_documents" alt="" coords="5,5,277,187">
+</map>
+<map id="users_password_link" name="users_password_link">
+<area shape="rect" id="node1" href="tables/users_password_link.html" title="users_password_link" alt="" coords="5,5,239,187">
+</map>
+<map id="accounts_cases" name="accounts_cases">
+<area shape="rect" id="node1" href="tables/accounts_cases.html" title="accounts_cases" alt="" coords="5,5,199,216">
+</map>
+<map id="accounts_cstm" name="accounts_cstm">
+<area shape="rect" id="node1" href="tables/accounts_cstm.html" title="accounts_cstm" alt="" coords="5,5,313,216">
+</map>
+<map id="cases_cstm" name="cases_cstm">
+<area shape="rect" id="node1" href="tables/cases_cstm.html" title="cases_cstm" alt="" coords="5,5,313,216">
+</map>
+<map id="emails_email_addr_rel" name="emails_email_addr_rel">
+<area shape="rect" id="node1" href="tables/emails_email_addr_rel.html" title="emails_email_addr_rel" alt="" coords="5,5,252,216">
+</map>
+<map id="folders_rel" name="folders_rel">
+<area shape="rect" id="node1" href="tables/folders_rel.html" title="folders_rel" alt="" coords="5,5,240,216">
+</map>
+<map id="fp_events_fp_event_delegates_1_c" name="fp_events_fp_event_delegates_1_c">
+<area shape="rect" id="node1" href="tables/fp_events_fp_event_delegates_1_c.html" title="fp_events_fp_event_delegates_1_c" alt="" coords="5,5,553,216">
+</map>
+<map id="leads_cstm" name="leads_cstm">
+<area shape="rect" id="node1" href="tables/leads_cstm.html" title="leads_cstm" alt="" coords="5,5,313,216">
+</map>
+<map id="meetings_cstm" name="meetings_cstm">
+<area shape="rect" id="node1" href="tables/meetings_cstm.html" title="meetings_cstm" alt="" coords="5,5,313,216">
+</map>
+<map id="opportunities_cstm" name="opportunities_cstm">
+<area shape="rect" id="node1" href="tables/opportunities_cstm.html" title="opportunities_cstm" alt="" coords="5,5,313,216">
+</map>
+<map id="project_cstm" name="project_cstm">
+<area shape="rect" id="node1" href="tables/project_cstm.html" title="project_cstm" alt="" coords="5,5,313,216">
+</map>
+<map id="projects_products" name="projects_products">
+<area shape="rect" id="node1" href="tables/projects_products.html" title="projects_products" alt="" coords="5,5,215,216">
+</map>
+<map id="prospects_cstm" name="prospects_cstm">
+<area shape="rect" id="node1" href="tables/prospects_cstm.html" title="prospects_cstm" alt="" coords="5,5,313,216">
+</map>
+<map id="securitygroups_default" name="securitygroups_default">
+<area shape="rect" id="node1" href="tables/securitygroups_default.html" title="securitygroups_default" alt="" coords="5,5,261,216">
+</map>
+<map id="users_feeds" name="users_feeds">
+<area shape="rect" id="node1" href="tables/users_feeds.html" title="users_feeds" alt="" coords="5,5,183,216">
+</map>
+<map id="inbound_email_autoreply" name="inbound_email_autoreply">
+<area shape="rect" id="node1" href="tables/inbound_email_autoreply.html" title="inbound_email_autoreply" alt="" coords="5,5,280,245">
+</map>
+<map id="roles_modules" name="roles_modules">
+<area shape="rect" id="node1" href="tables/roles_modules.html" title="roles_modules" alt="" coords="5,5,189,245">
+</map>
+<map id="users_last_import" name="users_last_import">
+<area shape="rect" id="node1" href="tables/users_last_import.html" title="users_last_import" alt="" coords="5,5,213,245">
+</map>
+<map id="user_preferences" name="user_preferences">
+<area shape="rect" id="node1" href="tables/user_preferences.html" title="user_preferences" alt="" coords="5,5,209,275">
+</map>
+<map id="users_signatures" name="users_signatures">
+<area shape="rect" id="node1" href="tables/users_signatures.html" title="users_signatures" alt="" coords="5,5,207,304">
+</map>
+<map id="vcals" name="vcals">
+<area shape="rect" id="node1" href="tables/vcals.html" title="vcals" alt="" coords="5,5,183,304">
+</map>
+<map id="accounts_audit" name="accounts_audit">
+<area shape="rect" id="node1" href="tables/accounts_audit.html" title="accounts_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="am_projecttemplates_audit" name="am_projecttemplates_audit">
+<area shape="rect" id="node1" href="tables/am_projecttemplates_audit.html" title="am_projecttemplates_audit" alt="" coords="5,5,299,363">
+</map>
+<map id="am_tasktemplates_audit" name="am_tasktemplates_audit">
+<area shape="rect" id="node1" href="tables/am_tasktemplates_audit.html" title="am_tasktemplates_audit" alt="" coords="5,5,273,363">
+</map>
+<map id="aod_index_audit" name="aod_index_audit">
+<area shape="rect" id="node1" href="tables/aod_index_audit.html" title="aod_index_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="aod_indexevent_audit" name="aod_indexevent_audit">
+<area shape="rect" id="node1" href="tables/aod_indexevent_audit.html" title="aod_indexevent_audit" alt="" coords="5,5,251,363">
+</map>
+<map id="aok_knowledge_base_categories_audit" name="aok_knowledge_base_categories_audit">
+<area shape="rect" id="node1" href="tables/aok_knowledge_base_categories_audit.html" title="aok_knowledge_base_categories_audit" alt="" coords="5,5,401,363">
+</map>
+<map id="aok_knowledgebase_audit" name="aok_knowledgebase_audit">
+<area shape="rect" id="node1" href="tables/aok_knowledgebase_audit.html" title="aok_knowledgebase_audit" alt="" coords="5,5,289,363">
+</map>
+<map id="aop_case_events_audit" name="aop_case_events_audit">
+<area shape="rect" id="node1" href="tables/aop_case_events_audit.html" title="aop_case_events_audit" alt="" coords="5,5,260,363">
+</map>
+<map id="aop_case_updates_audit" name="aop_case_updates_audit">
+<area shape="rect" id="node1" href="tables/aop_case_updates_audit.html" title="aop_case_updates_audit" alt="" coords="5,5,272,363">
+</map>
+<map id="aor_reports_audit" name="aor_reports_audit">
+<area shape="rect" id="node1" href="tables/aor_reports_audit.html" title="aor_reports_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="aos_contracts_audit" name="aos_contracts_audit">
+<area shape="rect" id="node1" href="tables/aos_contracts_audit.html" title="aos_contracts_audit" alt="" coords="5,5,233,363">
+</map>
+<map id="aos_invoices_audit" name="aos_invoices_audit">
+<area shape="rect" id="node1" href="tables/aos_invoices_audit.html" title="aos_invoices_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="aos_line_item_groups_audit" name="aos_line_item_groups_audit">
+<area shape="rect" id="node1" href="tables/aos_line_item_groups_audit.html" title="aos_line_item_groups_audit" alt="" coords="5,5,300,363">
+</map>
+<map id="aos_pdf_templates_audit" name="aos_pdf_templates_audit">
+<area shape="rect" id="node1" href="tables/aos_pdf_templates_audit.html" title="aos_pdf_templates_audit" alt="" coords="5,5,277,363">
+</map>
+<map id="aos_product_categories_audit" name="aos_product_categories_audit">
+<area shape="rect" id="node1" href="tables/aos_product_categories_audit.html" title="aos_product_categories_audit" alt="" coords="5,5,321,363">
+</map>
+<map id="aos_products_audit" name="aos_products_audit">
+<area shape="rect" id="node1" href="tables/aos_products_audit.html" title="aos_products_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="aos_products_quotes_audit" name="aos_products_quotes_audit">
+<area shape="rect" id="node1" href="tables/aos_products_quotes_audit.html" title="aos_products_quotes_audit" alt="" coords="5,5,297,363">
+</map>
+<map id="aos_quotes_audit" name="aos_quotes_audit">
+<area shape="rect" id="node1" href="tables/aos_quotes_audit.html" title="aos_quotes_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="aow_workflow_audit" name="aow_workflow_audit">
+<area shape="rect" id="node1" href="tables/aow_workflow_audit.html" title="aow_workflow_audit" alt="" coords="5,5,236,363">
+</map>
+<map id="bugs_audit" name="bugs_audit">
+<area shape="rect" id="node1" href="tables/bugs_audit.html" title="bugs_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="calls_reschedule_audit" name="calls_reschedule_audit">
+<area shape="rect" id="node1" href="tables/calls_reschedule_audit.html" title="calls_reschedule_audit" alt="" coords="5,5,257,363">
+</map>
+<map id="campaigns_audit" name="campaigns_audit">
+<area shape="rect" id="node1" href="tables/campaigns_audit.html" title="campaigns_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="cases_audit" name="cases_audit">
+<area shape="rect" id="node1" href="tables/cases_audit.html" title="cases_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="contacts_audit" name="contacts_audit">
+<area shape="rect" id="node1" href="tables/contacts_audit.html" title="contacts_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="contacts_cstm" name="contacts_cstm">
+<area shape="rect" id="node1" href="tables/contacts_cstm.html" title="contacts_cstm" alt="" coords="5,5,313,363">
+</map>
+<map id="email_addresses_audit" name="email_addresses_audit">
+<area shape="rect" id="node1" href="tables/email_addresses_audit.html" title="email_addresses_audit" alt="" coords="5,5,257,363">
+</map>
+<map id="emails_text" name="emails_text">
+<area shape="rect" id="node1" href="tables/emails_text.html" title="emails_text" alt="" coords="5,5,205,363">
+</map>
+<map id="fp_event_locations_audit" name="fp_event_locations_audit">
+<area shape="rect" id="node1" href="tables/fp_event_locations_audit.html" title="fp_event_locations_audit" alt="" coords="5,5,276,363">
+</map>
+<map id="fp_events_audit" name="fp_events_audit">
+<area shape="rect" id="node1" href="tables/fp_events_audit.html" title="fp_events_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="jjwg_address_cache_audit" name="jjwg_address_cache_audit">
+<area shape="rect" id="node1" href="tables/jjwg_address_cache_audit.html" title="jjwg_address_cache_audit" alt="" coords="5,5,285,363">
+</map>
+<map id="jjwg_areas_audit" name="jjwg_areas_audit">
+<area shape="rect" id="node1" href="tables/jjwg_areas_audit.html" title="jjwg_areas_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="jjwg_maps_audit" name="jjwg_maps_audit">
+<area shape="rect" id="node1" href="tables/jjwg_maps_audit.html" title="jjwg_maps_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="jjwg_markers_audit" name="jjwg_markers_audit">
+<area shape="rect" id="node1" href="tables/jjwg_markers_audit.html" title="jjwg_markers_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="leads_audit" name="leads_audit">
+<area shape="rect" id="node1" href="tables/leads_audit.html" title="leads_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="opportunities_audit" name="opportunities_audit">
+<area shape="rect" id="node1" href="tables/opportunities_audit.html" title="opportunities_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="outbound_email_audit" name="outbound_email_audit">
+<area shape="rect" id="node1" href="tables/outbound_email_audit.html" title="outbound_email_audit" alt="" coords="5,5,253,363">
+</map>
+<map id="project_task_audit" name="project_task_audit">
+<area shape="rect" id="node1" href="tables/project_task_audit.html" title="project_task_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="securitygroups_audit" name="securitygroups_audit">
+<area shape="rect" id="node1" href="tables/securitygroups_audit.html" title="securitygroups_audit" alt="" coords="5,5,244,363">
+</map>
+<map id="surveyquestionoptions_audit" name="surveyquestionoptions_audit">
+<area shape="rect" id="node1" href="tables/surveyquestionoptions_audit.html" title="surveyquestionoptions_audit" alt="" coords="5,5,316,363">
+</map>
+<map id="surveyquestionresponses_audit" name="surveyquestionresponses_audit">
+<area shape="rect" id="node1" href="tables/surveyquestionresponses_audit.html" title="surveyquestionresponses_audit" alt="" coords="5,5,340,363">
+</map>
+<map id="surveyquestions_audit" name="surveyquestions_audit">
+<area shape="rect" id="node1" href="tables/surveyquestions_audit.html" title="surveyquestions_audit" alt="" coords="5,5,257,363">
+</map>
+<map id="surveyresponses_audit" name="surveyresponses_audit">
+<area shape="rect" id="node1" href="tables/surveyresponses_audit.html" title="surveyresponses_audit" alt="" coords="5,5,261,363">
+</map>
+<map id="surveys_audit" name="surveys_audit">
+<area shape="rect" id="node1" href="tables/surveys_audit.html" title="surveys_audit" alt="" coords="5,5,232,363">
+</map>
+<map id="tracker" name="tracker">
+<area shape="rect" id="node1" href="tables/tracker.html" title="tracker" alt="" coords="5,5,187,392">
+</map>
+<map id="folders" name="folders">
+<area shape="rect" id="node1" href="tables/folders.html" title="folders" alt="" coords="5,5,189,421">
+</map>
+<map id="upgrade_history" name="upgrade_history">
+<area shape="rect" id="node1" href="tables/upgrade_history.html" title="upgrade_history" alt="" coords="5,5,201,421">
+</map>
+<map id="custom_fields" name="custom_fields">
+<area shape="rect" id="node1" href="tables/custom_fields.html" title="custom_fields" alt="" coords="5,5,184,451">
+</map>
+<map id="import_maps" name="import_maps">
+<area shape="rect" id="node1" href="tables/import_maps.html" title="import_maps" alt="" coords="5,5,207,480">
+</map>
+<map id="email_cache" name="email_cache">
+<area shape="rect" id="node1" href="tables/email_cache.html" title="email_cache" alt="" coords="5,5,172,539">
+</map>
+<map id="relationships" name="relationships">
+<area shape="rect" id="node1" href="tables/relationships.html" title="relationships" alt="" coords="5,5,336,539">
+</map>
+<map id="fields_meta_data" name="fields_meta_data">
+<area shape="rect" id="node1" href="tables/fields_meta_data.html" title="fields_meta_data" alt="" coords="5,5,207,685">
+</map>
+
+			</div>
+		</div>			
+      </section>    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="bower/codemirror/codemirror.js"></script>
+<script src="bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="bower/admin-lte/dist/js/app.min.js"></script>
+<script src=""></script>
+<script src="schemaSpy.js"></script>
+</body>
+</html>

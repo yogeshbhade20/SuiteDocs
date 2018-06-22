@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>securitygroups_records - suitecrm Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>suitecrm</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>            
+			<!--<li><a href="../components.html" title="List of system components">Components</a></li>-->
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>securitygroups_records</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="securitygroup_id">securitygroup_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="securitygroups_records.securitygroup_id references securitygroups.id">
+						<a href='securitygroups.html'>securitygroups</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="record_id">record_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="securitygroups_records.record_id references aok_knowledgebase.id">
+						<a href='aok_knowledgebase.html'>aok_knowledgebase</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references prospects.id">
+						<a href='prospects.html'>prospects</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references fp_events.id">
+						<a href='fp_events.html'>fp_events</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references project_task.id">
+						<a href='project_task.html'>project_task</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references aor_reports.id">
+						<a href='aor_reports.html'>aor_reports</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references aos_contracts.id">
+						<a href='aos_contracts.html'>aos_contracts</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references aos_products.id">
+						<a href='aos_products.html'>aos_products</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references leads.id">
+						<a href='leads.html'>leads</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references bugs.id">
+						<a href='bugs.html'>bugs</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references contacts.id">
+						<a href='contacts.html'>contacts</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references calls.id">
+						<a href='calls.html'>calls</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references jjwg_markers.id">
+						<a href='jjwg_markers.html'>jjwg_markers</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references aos_invoices.id">
+						<a href='aos_invoices.html'>aos_invoices</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references surveys.id">
+						<a href='surveys.html'>surveys</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references surveyquestionoptions.id">
+						<a href='surveyquestionoptions.html'>surveyquestionoptions</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references documents.id">
+						<a href='documents.html'>documents</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references meetings.id">
+						<a href='meetings.html'>meetings</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references jjwg_maps.id">
+						<a href='jjwg_maps.html'>jjwg_maps</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references tasks.id">
+						<a href='tasks.html'>tasks</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references aos_quotes.id">
+						<a href='aos_quotes.html'>aos_quotes</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references cases.id">
+						<a href='cases.html'>cases</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references opportunities.id">
+						<a href='opportunities.html'>opportunities</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references surveyquestions.id">
+						<a href='surveyquestions.html'>surveyquestions</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references aow_workflow.id">
+						<a href='aow_workflow.html'>aow_workflow</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references campaigns.id">
+						<a href='campaigns.html'>campaigns</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references aos_pdf_templates.id">
+						<a href='aos_pdf_templates.html'>aos_pdf_templates</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references spots.id">
+						<a href='spots.html'>spots</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references aos_product_categories.id">
+						<a href='aos_product_categories.html'>aos_product_categories</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references accounts.id">
+						<a href='accounts.html'>accounts</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references prospect_lists.id">
+						<a href='prospect_lists.html'>prospect_lists</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references surveyresponses.id">
+						<a href='surveyresponses.html'>surveyresponses</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references email_templates.id">
+						<a href='email_templates.html'>email_templates</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references notes.id">
+						<a href='notes.html'>notes</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references surveyquestionresponses.id">
+						<a href='surveyquestionresponses.html'>surveyquestionresponses</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references jjwg_areas.id">
+						<a href='jjwg_areas.html'>jjwg_areas</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references emails.id">
+						<a href='emails.html'>emails</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="securitygroups_records.record_id references project.id">
+						<a href='project.html'>project</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="module">module</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="date_modified">date_modified</span></td>
+				 <td>DATETIME</td>
+				 <td>26</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="modified_user_id">modified_user_id</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="created_by">created_by</span></td>
+				 <td>CHAR</td>
+				 <td>36</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="deleted">deleted</span></td>
+				 <td>BIT</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>0</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='8 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>id</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>idx_securitygroups_records_del</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+				  <td>deleted + record_id + module + securitygroup_id</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>idx_securitygroups_records_mod</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+				  <td>module + deleted + record_id + securitygroup_id</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
+			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="1176,2000,1488,2323">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="817,1383,1129,1676">
+<area shape="rect" id="node3" href="aos_invoices.html" title="aos_invoices" alt="" coords="813,1065,1132,1329">
+<area shape="rect" id="node4" href="aos_quotes.html" title="aos_quotes" alt="" coords="813,1693,1132,1987">
+<area shape="rect" id="node5" href="calls.html" title="calls" alt="" coords="532,2171,769,2552">
+<area shape="rect" id="node6" href="cases.html" title="cases" alt="" coords="849,631,1097,1012">
+<area shape="rect" id="node7" href="emails.html" title="emails" alt="" coords="550,2981,751,3363">
+<area shape="rect" id="node8" href="leads.html" title="leads" alt="" coords="820,2256,1125,2784">
+<area shape="rect" id="node9" href="meetings.html" title="meetings" alt="" coords="251,2641,488,3023">
+<area shape="rect" id="node10" href="notes.html" title="notes" alt="" coords="5,1976,207,2328">
+<area shape="rect" id="node11" href="tasks.html" title="tasks" alt="" coords="550,1700,751,2081">
+<area shape="rect" id="node12" href="aos_product_categories.html" title="aos_product_categories" alt="" coords="1532,3863,1793,4097">
+<area shape="rect" id="node13" href="aos_products.html" title="aos_products" alt="" coords="1197,4065,1467,4300">
+<area shape="rect" id="node14" href="bugs.html" title="bugs" alt="" coords="869,3769,1076,4092">
+<area shape="rect" id="node15" href="campaigns.html" title="campaigns" alt="" coords="1556,2668,1769,2932">
+<area shape="rect" id="node16" href="contacts.html" title="contacts" alt="" coords="1179,1339,1485,1691">
+<area shape="rect" id="node17" href="opportunities.html" title="opportunities" alt="" coords="1230,2340,1434,2663">
+<area shape="rect" id="node18" href="prospects.html" title="prospects" alt="" coords="820,3292,1125,3644">
+<area shape="rect" id="node19" href="surveyresponses.html" title="surveyresponses" alt="" coords="1214,3496,1450,3760">
+<area shape="rect" id="node36" href="surveyquestionresponses.html" title="surveyquestionresponses" alt="" coords="833,4217,1113,4452">
+<area shape="rect" id="node20" href="jjwg_maps.html" title="jjwg_maps" alt="" coords="1562,2416,1763,2651">
+<area shape="rect" id="node21" href="project.html" title="project" alt="" coords="1197,3129,1467,3335">
+<area shape="rect" id="node22" href="project_task.html" title="project_task" alt="" coords="868,2909,1077,3203">
+<area shape="rect" id="node23" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1837,3269,2191,3573">
+<area shape="rect" id="node24" href="aok_knowledgebase.html" title="aok_knowledgebase" alt="" coords="1548,4115,1777,4320">
+<area shape="rect" id="node25" href="aor_reports.html" title="aor_reports" alt="" coords="1562,4337,1763,4543">
+<area shape="rect" id="node26" href="aos_pdf_templates.html" title="aos_pdf_templates" alt="" coords="1554,4560,1771,4765">
+<area shape="rect" id="node27" href="aow_workflow.html" title="aow_workflow" alt="" coords="1562,4783,1763,5017">
+<area shape="rect" id="node28" href="documents.html" title="documents" alt="" coords="1541,5035,1785,5299">
+<area shape="rect" id="node29" href="email_templates.html" title="email_templates" alt="" coords="1562,5316,1763,5492">
+<area shape="rect" id="node30" href="fp_events.html" title="fp_events" alt="" coords="1548,5509,1777,5715">
+<area shape="rect" id="node31" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="1562,5732,1763,5937">
+<area shape="rect" id="node32" href="jjwg_markers.html" title="jjwg_markers" alt="" coords="1562,5955,1763,6160">
+<area shape="rect" id="node33" href="prospect_lists.html" title="prospect_lists" alt="" coords="1562,6177,1763,6353">
+<area shape="rect" id="node34" href="spots.html" title="spots" alt="" coords="1562,228,1763,433">
+<area shape="rect" id="node35" href="surveyquestionoptions.html" title="surveyquestionoptions" alt="" coords="845,4469,1101,4704">
+<area shape="rect" id="node37" href="surveyquestions.html" title="surveyquestions" alt="" coords="1219,3777,1445,4012">
+<area shape="rect" id="node38" href="surveys.html" title="surveys" alt="" coords="1562,3532,1763,3737">
+<area shape="rect" id="node39" href="securitygroups.html" title="securitygroups" alt="" coords="1562,5,1763,211">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/securitygroups_records.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="2645,4634,2957,4956">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="817,9775,1129,10068">
+<area shape="rect" id="node3" href="aos_invoices.html" title="aos_invoices" alt="" coords="813,10364,1132,10628">
+<area shape="rect" id="node4" href="aos_quotes.html" title="aos_quotes" alt="" coords="813,10802,1132,11095">
+<area shape="rect" id="node5" href="calls.html" title="calls" alt="" coords="532,584,769,966">
+<area shape="rect" id="node6" href="campaign_log.html" title="campaign_log" alt="" coords="2395,2874,2574,2962">
+<area shape="rect" id="node7" href="cases.html" title="cases" alt="" coords="849,6860,1097,7242">
+<area shape="rect" id="node8" href="emails.html" title="emails" alt="" coords="550,5515,751,5896">
+<area shape="rect" id="node9" href="leads.html" title="leads" alt="" coords="820,1447,1125,1975">
+<area shape="rect" id="node10" href="meetings.html" title="meetings" alt="" coords="251,5950,488,6331">
+<area shape="rect" id="node11" href="notes.html" title="notes" alt="" coords="5,2152,207,2504">
+<area shape="rect" id="node12" href="tasks.html" title="tasks" alt="" coords="550,2494,751,2875">
+<area shape="rect" id="node30" href="aos_line_item_groups.html" title="aos_line_item_groups" alt="" coords="533,10804,768,10892">
+<area shape="rect" id="node31" href="aos_products_quotes.html" title="aos_products_quotes" alt="" coords="253,10275,486,10363">
+<area shape="rect" id="node45" href="calls_reschedule.html" title="calls_reschedule" alt="" coords="271,251,468,339">
+<area shape="rect" id="node16" href="contacts.html" title="contacts" alt="" coords="1239,2406,1544,2758">
+<area shape="rect" id="node18" href="opportunities.html" title="opportunities" alt="" coords="1289,5846,1493,6168">
+<area shape="rect" id="node49" href="users.html" title="users" alt="" coords="2095,7152,2251,7240">
+<area shape="rect" id="node24" href="aop_case_updates.html" title="aop_case_updates" alt="" coords="545,1055,756,1143">
+<area shape="rect" id="node56" href="aop_case_events.html" title="aop_case_events" alt="" coords="550,9423,751,9511">
+<area shape="rect" id="node13" href="accounts_bugs.html" title="accounts_bugs" alt="" coords="3084,743,3272,831">
+<area shape="rect" id="node14" href="bugs.html" title="bugs" alt="" coords="1288,780,1495,1103">
+<area shape="rect" id="node15" href="accounts_contacts.html" title="accounts_contacts" alt="" coords="3071,2835,3285,2923">
+<area shape="rect" id="node17" href="accounts_opportunities.html" title="accounts_opportunities" alt="" coords="3055,5030,3301,5118">
+<area shape="rect" id="node89" href="currencies.html" title="currencies" alt="" coords="895,6054,1050,6142">
+<area shape="rect" id="node19" href="am_projecttemplates_contacts_1_c.html" title="am_projecttemplates_contacts_1_c" alt="" coords="1651,1907,1977,1995">
+<area shape="rect" id="node20" href="am_projecttemplates_project_1_c.html" title="am_projecttemplates_project_1_c" alt="" coords="1656,4420,1972,4508">
+<area shape="rect" id="node21" href="project.html" title="project" alt="" coords="1256,4915,1527,5120">
+<area shape="rect" id="node72" href="project_task.html" title="project_task" alt="" coords="868,5246,1077,5539">
+<area shape="rect" id="node22" href="aok_knowledgebase_categories.html" title="aok_knowledgebase_categories" alt="" coords="2021,8372,2324,8460">
+<area shape="rect" id="node23" href="aok_knowledgebase.html" title="aok_knowledgebase" alt="" coords="1699,7935,1929,8140">
+<area shape="rect" id="node25" href="aor_reports.html" title="aor_reports" alt="" coords="1713,7076,1915,7282">
+<area shape="rect" id="node26" href="aor_charts.html" title="aor_charts" alt="" coords="1313,7024,1469,7112">
+<area shape="rect" id="node27" href="aor_conditions.html" title="aor_conditions" alt="" coords="1299,7140,1484,7228">
+<area shape="rect" id="node28" href="aor_fields.html" title="aor_fields" alt="" coords="1317,7246,1466,7334">
+<area shape="rect" id="node29" href="aor_scheduled_reports.html" title="aor_scheduled_reports" alt="" coords="1270,7351,1513,7439">
+<area shape="rect" id="node32" href="aos_contracts_am_projecttemplates_1_c.html" title="aos_contracts_am_projecttemplates_1_c" alt="" coords="1209,9726,1574,9814">
+<area shape="rect" id="node33" href="aos_contracts_am_projecttemplates_2_c.html" title="aos_contracts_am_projecttemplates_2_c" alt="" coords="1209,9831,1574,9919">
+<area shape="rect" id="node34" href="aos_contracts_documents.html" title="aos_contracts_documents" alt="" coords="1681,8832,1947,8920">
+<area shape="rect" id="node35" href="documents.html" title="documents" alt="" coords="1269,7948,1513,8212">
+<area shape="rect" id="node61" href="document_revisions.html" title="document_revisions" alt="" coords="861,7951,1084,8039">
+<area shape="rect" id="node36" href="aos_product_categories.html" title="aos_product_categories" alt="" coords="1683,9980,1945,10215">
+<area shape="rect" id="node37" href="aos_products.html" title="aos_products" alt="" coords="1256,10044,1527,10279">
+<area shape="rect" id="node38" href="aos_quotes_aos_invoices_c.html" title="aos_quotes_aos_invoices_c" alt="" coords="1253,10791,1530,10879">
+<area shape="rect" id="node39" href="aos_quotes_os_contracts_c.html" title="aos_quotes_os_contracts_c" alt="" coords="1253,10544,1530,10632">
+<area shape="rect" id="node40" href="aos_quotes_project_c.html" title="aos_quotes_project_c" alt="" coords="1697,8727,1931,8815">
+<area shape="rect" id="node41" href="aow_workflow.html" title="aow_workflow" alt="" coords="1713,7559,1915,7794">
+<area shape="rect" id="node42" href="aow_actions.html" title="aow_actions" alt="" coords="1307,7456,1475,7544">
+<area shape="rect" id="node43" href="aow_conditions.html" title="aow_conditions" alt="" coords="1296,7562,1487,7650">
+<area shape="rect" id="node44" href="aow_processed.html" title="aow_processed" alt="" coords="1297,7722,1486,7810">
+<area shape="rect" id="node46" href="calls_contacts.html" title="calls_contacts" alt="" coords="1723,1300,1905,1388">
+<area shape="rect" id="node47" href="calls_leads.html" title="calls_leads" alt="" coords="1313,1156,1470,1244">
+<area shape="rect" id="node48" href="calls_users.html" title="calls_users" alt="" coords="2405,1694,2565,1782">
+<area shape="rect" id="node50" href="campaigns.html" title="campaigns" alt="" coords="1707,6022,1921,6286">
+<area shape="rect" id="node54" href="prospects.html" title="prospects" alt="" coords="1239,2839,1544,3191">
+<area shape="rect" id="node55" href="surveyresponses.html" title="surveyresponses" alt="" coords="1273,8479,1509,8743">
+<area shape="rect" id="node69" href="prospect_lists.html" title="prospect_lists" alt="" coords="1713,10919,1915,11095">
+<area shape="rect" id="node70" href="email_templates.html" title="email_templates" alt="" coords="1713,11328,1915,11504">
+<area shape="rect" id="node74" href="fp_event_locations.html" title="fp_event_locations" alt="" coords="1285,8374,1498,8462">
+<area shape="rect" id="node75" href="fp_events.html" title="fp_events" alt="" coords="1277,3438,1506,3643">
+<area shape="rect" id="node80" href="jjwg_maps.html" title="jjwg_maps" alt="" coords="1713,4667,1915,4902">
+<area shape="rect" id="node82" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="1713,3043,1915,3248">
+<area shape="rect" id="node84" href="jjwg_markers.html" title="jjwg_markers" alt="" coords="1713,3266,1915,3471">
+<area shape="rect" id="node101" href="securitygroups.html" title="securitygroups" alt="" coords="1713,10408,1915,10614">
+<area shape="rect" id="node104" href="aos_pdf_templates.html" title="aos_pdf_templates" alt="" coords="1705,3488,1923,3694">
+<area shape="rect" id="node105" href="spots.html" title="spots" alt="" coords="1713,6514,1915,6719">
+<area shape="rect" id="node106" href="surveyquestionoptions.html" title="surveyquestionoptions" alt="" coords="845,8974,1101,9208">
+<area shape="rect" id="node107" href="surveyquestionresponses.html" title="surveyquestionresponses" alt="" coords="833,8515,1113,8750">
+<area shape="rect" id="node108" href="surveyquestions.html" title="surveyquestions" alt="" coords="1278,9118,1505,9352">
+<area shape="rect" id="node109" href="surveys.html" title="surveys" alt="" coords="1713,9190,1915,9395">
+<area shape="rect" id="node51" href="campaign_trkrs.html" title="campaign_trkrs" alt="" coords="1297,6291,1486,6379">
+<area shape="rect" id="node52" href="email_marketing.html" title="email_marketing" alt="" coords="1293,10650,1489,10738">
+<area shape="rect" id="node53" href="emailman.html" title="emailman" alt="" coords="1317,6186,1465,6274">
+<area shape="rect" id="node57" href="cases_bugs.html" title="cases_bugs" alt="" coords="1732,3747,1896,3835">
+<area shape="rect" id="node58" href="contacts_bugs.html" title="contacts_bugs" alt="" coords="1722,874,1906,962">
+<area shape="rect" id="node59" href="contacts_cases.html" title="contacts_cases" alt="" coords="1719,4243,1909,4331">
+<area shape="rect" id="node60" href="contacts_users.html" title="contacts_users" alt="" coords="2391,3368,2579,3456">
+<area shape="rect" id="node62" href="documents_accounts.html" title="documents_accounts" alt="" coords="3063,5640,3293,5728">
+<area shape="rect" id="node63" href="documents_bugs.html" title="documents_bugs" alt="" coords="1713,3960,1915,4048">
+<area shape="rect" id="node64" href="documents_cases.html" title="documents_cases" alt="" coords="1711,8158,1917,8246">
+<area shape="rect" id="node65" href="documents_contacts.html" title="documents_contacts" alt="" coords="1701,5027,1927,5115">
+<area shape="rect" id="node66" href="documents_opportunities.html" title="documents_opportunities" alt="" coords="1683,6408,1945,6496">
+<area shape="rect" id="node67" href="email_addr_bean_rel.html" title="email_addr_bean_rel" alt="" coords="3065,1394,3291,1482">
+<area shape="rect" id="node68" href="email_marketing_prospect_lists.html" title="email_marketing_prospect_lists" alt="" coords="2021,11256,2324,11344">
+<area shape="rect" id="node71" href="emails_beans.html" title="emails_beans" alt="" coords="3090,2199,3266,2287">
+<area shape="rect" id="node73" href="fp_event_locations_fp_events_1_c.html" title="fp_event_locations_fp_events_1_c" alt="" coords="1653,5274,1975,5362">
+<area shape="rect" id="node76" href="fp_events_contacts_c.html" title="fp_events_contacts_c" alt="" coords="1697,2370,1931,2458">
+<area shape="rect" id="node77" href="fp_events_fp_event_locations_1_c.html" title="fp_events_fp_event_locations_1_c" alt="" coords="1653,5556,1975,5644">
+<area shape="rect" id="node78" href="fp_events_leads_1_c.html" title="fp_events_leads_1_c" alt="" coords="1701,2192,1927,2280">
+<area shape="rect" id="node79" href="fp_events_prospects_1_c.html" title="fp_events_prospects_1_c" alt="" coords="1685,2830,1943,2918">
+<area shape="rect" id="node81" href="jjwg_maps_jjwg_areas_c.html" title="jjwg_maps_jjwg_areas_c" alt="" coords="2046,4599,2299,4687">
+<area shape="rect" id="node83" href="jjwg_maps_jjwg_markers_c.html" title="jjwg_maps_jjwg_markers_c" alt="" coords="2037,4778,2309,4866">
+<area shape="rect" id="node85" href="linked_documents.html" title="linked_documents" alt="" coords="1709,6303,1919,6391">
+<area shape="rect" id="node86" href="meetings_contacts.html" title="meetings_contacts" alt="" coords="1707,4138,1921,4226">
+<area shape="rect" id="node87" href="meetings_leads.html" title="meetings_leads" alt="" coords="1297,3768,1486,3856">
+<area shape="rect" id="node88" href="meetings_users.html" title="meetings_users" alt="" coords="2389,8406,2581,8494">
+<area shape="rect" id="node90" href="opportunities_contacts.html" title="opportunities_contacts" alt="" coords="1693,4562,1935,4650">
+<area shape="rect" id="node91" href="project_contacts_1_c.html" title="project_contacts_1_c" alt="" coords="1699,2688,1929,2776">
+<area shape="rect" id="node92" href="project_users_1_c.html" title="project_users_1_c" alt="" coords="2380,6094,2589,6182">
+<area shape="rect" id="node93" href="projects_accounts.html" title="projects_accounts" alt="" coords="3073,4563,3283,4651">
+<area shape="rect" id="node94" href="projects_bugs.html" title="projects_bugs" alt="" coords="1723,1766,1905,1854">
+<area shape="rect" id="node95" href="projects_cases.html" title="projects_cases" alt="" coords="1721,5168,1907,5256">
+<area shape="rect" id="node96" href="projects_contacts.html" title="projects_contacts" alt="" coords="1711,2511,1917,2599">
+<area shape="rect" id="node97" href="projects_opportunities.html" title="projects_opportunities" alt="" coords="1694,5379,1934,5467">
+<area shape="rect" id="node98" href="prospect_list_campaigns.html" title="prospect_list_campaigns" alt="" coords="2045,8478,2301,8566">
+<area shape="rect" id="node99" href="prospect_lists_prospects.html" title="prospect_lists_prospects" alt="" coords="3049,4000,3307,4088">
+<area shape="rect" id="node100" href="releases.html" title="releases" alt="" coords="1745,1015,1883,1103">
+<area shape="rect" id="node102" href="securitygroups_acl_roles.html" title="securitygroups_acl_roles" alt="" coords="2044,10411,2301,10499">
+<area shape="rect" id="node103" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="3001,6315,3355,6619">
+<area shape="rect" id="node110" href="securitygroups_users.html" title="securitygroups_users" alt="" coords="2368,7672,2601,7760">
+<area shape="rect" id="node111" href="surveyquestionoptions_surveyquestionresponses.html" title="surveyquestionoptions_surveyquestionresponses" alt="" coords="1176,8904,1607,8992">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/securitygroups_records.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="1176,2000,1488,2323">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="817,1383,1129,1676">
+<area shape="rect" id="node3" href="aos_invoices.html" title="aos_invoices" alt="" coords="813,1065,1132,1329">
+<area shape="rect" id="node4" href="aos_quotes.html" title="aos_quotes" alt="" coords="813,1693,1132,1987">
+<area shape="rect" id="node5" href="calls.html" title="calls" alt="" coords="532,2171,769,2552">
+<area shape="rect" id="node6" href="cases.html" title="cases" alt="" coords="849,631,1097,1012">
+<area shape="rect" id="node7" href="emails.html" title="emails" alt="" coords="550,2981,751,3363">
+<area shape="rect" id="node8" href="leads.html" title="leads" alt="" coords="820,2256,1125,2784">
+<area shape="rect" id="node9" href="meetings.html" title="meetings" alt="" coords="251,2641,488,3023">
+<area shape="rect" id="node10" href="notes.html" title="notes" alt="" coords="5,1976,207,2328">
+<area shape="rect" id="node11" href="tasks.html" title="tasks" alt="" coords="550,1700,751,2081">
+<area shape="rect" id="node12" href="aos_product_categories.html" title="aos_product_categories" alt="" coords="1532,3863,1793,4097">
+<area shape="rect" id="node13" href="aos_products.html" title="aos_products" alt="" coords="1197,4065,1467,4300">
+<area shape="rect" id="node14" href="bugs.html" title="bugs" alt="" coords="869,3769,1076,4092">
+<area shape="rect" id="node15" href="campaigns.html" title="campaigns" alt="" coords="1556,2668,1769,2932">
+<area shape="rect" id="node16" href="contacts.html" title="contacts" alt="" coords="1179,1339,1485,1691">
+<area shape="rect" id="node17" href="opportunities.html" title="opportunities" alt="" coords="1230,2340,1434,2663">
+<area shape="rect" id="node18" href="prospects.html" title="prospects" alt="" coords="820,3292,1125,3644">
+<area shape="rect" id="node19" href="surveyresponses.html" title="surveyresponses" alt="" coords="1214,3496,1450,3760">
+<area shape="rect" id="node36" href="surveyquestionresponses.html" title="surveyquestionresponses" alt="" coords="833,4217,1113,4452">
+<area shape="rect" id="node20" href="jjwg_maps.html" title="jjwg_maps" alt="" coords="1562,2416,1763,2651">
+<area shape="rect" id="node21" href="project.html" title="project" alt="" coords="1197,3129,1467,3335">
+<area shape="rect" id="node22" href="project_task.html" title="project_task" alt="" coords="868,2909,1077,3203">
+<area shape="rect" id="node23" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1837,3269,2191,3573">
+<area shape="rect" id="node24" href="aok_knowledgebase.html" title="aok_knowledgebase" alt="" coords="1548,4115,1777,4320">
+<area shape="rect" id="node25" href="aor_reports.html" title="aor_reports" alt="" coords="1562,4337,1763,4543">
+<area shape="rect" id="node26" href="aos_pdf_templates.html" title="aos_pdf_templates" alt="" coords="1554,4560,1771,4765">
+<area shape="rect" id="node27" href="aow_workflow.html" title="aow_workflow" alt="" coords="1562,4783,1763,5017">
+<area shape="rect" id="node28" href="documents.html" title="documents" alt="" coords="1541,5035,1785,5299">
+<area shape="rect" id="node29" href="email_templates.html" title="email_templates" alt="" coords="1562,5316,1763,5492">
+<area shape="rect" id="node30" href="fp_events.html" title="fp_events" alt="" coords="1548,5509,1777,5715">
+<area shape="rect" id="node31" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="1562,5732,1763,5937">
+<area shape="rect" id="node32" href="jjwg_markers.html" title="jjwg_markers" alt="" coords="1562,5955,1763,6160">
+<area shape="rect" id="node33" href="prospect_lists.html" title="prospect_lists" alt="" coords="1562,6177,1763,6353">
+<area shape="rect" id="node34" href="spots.html" title="spots" alt="" coords="1562,228,1763,433">
+<area shape="rect" id="node35" href="surveyquestionoptions.html" title="surveyquestionoptions" alt="" coords="845,4469,1101,4704">
+<area shape="rect" id="node37" href="surveyquestions.html" title="surveyquestions" alt="" coords="1219,3777,1445,4012">
+<area shape="rect" id="node38" href="surveys.html" title="surveys" alt="" coords="1562,3532,1763,3737">
+<area shape="rect" id="node39" href="securitygroups.html" title="securitygroups" alt="" coords="1562,5,1763,211">
+</map>
+
+					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/securitygroups_records.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="2645,6369,2957,6692">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="817,8491,1129,8784">
+<area shape="rect" id="node3" href="aos_invoices.html" title="aos_invoices" alt="" coords="813,10601,1132,10865">
+<area shape="rect" id="node4" href="aos_quotes.html" title="aos_quotes" alt="" coords="813,10073,1132,10367">
+<area shape="rect" id="node5" href="calls.html" title="calls" alt="" coords="532,531,769,912">
+<area shape="rect" id="node6" href="campaign_log.html" title="campaign_log" alt="" coords="2395,2869,2574,2957">
+<area shape="rect" id="node7" href="cases.html" title="cases" alt="" coords="849,4415,1097,4796">
+<area shape="rect" id="node8" href="emails.html" title="emails" alt="" coords="550,6549,751,6931">
+<area shape="rect" id="node9" href="leads.html" title="leads" alt="" coords="820,1547,1125,2075">
+<area shape="rect" id="node10" href="meetings.html" title="meetings" alt="" coords="251,7319,488,7700">
+<area shape="rect" id="node11" href="notes.html" title="notes" alt="" coords="5,2899,207,3251">
+<area shape="rect" id="node12" href="tasks.html" title="tasks" alt="" coords="550,3093,751,3475">
+<area shape="rect" id="node30" href="aos_line_item_groups.html" title="aos_line_item_groups" alt="" coords="533,10604,768,10692">
+<area shape="rect" id="node31" href="aos_products_quotes.html" title="aos_products_quotes" alt="" coords="253,9984,486,10072">
+<area shape="rect" id="node45" href="calls_reschedule.html" title="calls_reschedule" alt="" coords="271,180,468,268">
+<area shape="rect" id="node16" href="contacts.html" title="contacts" alt="" coords="1239,2981,1544,3333">
+<area shape="rect" id="node18" href="opportunities.html" title="opportunities" alt="" coords="1289,7175,1493,7497">
+<area shape="rect" id="node49" href="users.html" title="users" alt="" coords="2095,6492,2251,6580">
+<area shape="rect" id="node24" href="aop_case_updates.html" title="aop_case_updates" alt="" coords="545,408,756,496">
+<area shape="rect" id="node56" href="aop_case_events.html" title="aop_case_events" alt="" coords="550,9576,751,9664">
+<area shape="rect" id="node13" href="accounts_bugs.html" title="accounts_bugs" alt="" coords="3084,3425,3272,3513">
+<area shape="rect" id="node14" href="bugs.html" title="bugs" alt="" coords="1288,3456,1495,3779">
+<area shape="rect" id="node15" href="accounts_contacts.html" title="accounts_contacts" alt="" coords="3071,2437,3285,2525">
+<area shape="rect" id="node17" href="accounts_opportunities.html" title="accounts_opportunities" alt="" coords="3055,7079,3301,7167">
+<area shape="rect" id="node89" href="currencies.html" title="currencies" alt="" coords="895,7409,1050,7497">
+<area shape="rect" id="node19" href="am_projecttemplates_contacts_1_c.html" title="am_projecttemplates_contacts_1_c" alt="" coords="1651,2265,1977,2353">
+<area shape="rect" id="node20" href="am_projecttemplates_project_1_c.html" title="am_projecttemplates_project_1_c" alt="" coords="1656,7259,1972,7347">
+<area shape="rect" id="node21" href="project.html" title="project" alt="" coords="1256,6880,1527,7085">
+<area shape="rect" id="node72" href="project_task.html" title="project_task" alt="" coords="868,9193,1077,9487">
+<area shape="rect" id="node22" href="aok_knowledgebase_categories.html" title="aok_knowledgebase_categories" alt="" coords="2021,7187,2324,7275">
+<area shape="rect" id="node23" href="aok_knowledgebase.html" title="aok_knowledgebase" alt="" coords="1699,6859,1929,7064">
+<area shape="rect" id="node25" href="aor_reports.html" title="aor_reports" alt="" coords="1713,4999,1915,5204">
+<area shape="rect" id="node26" href="aor_charts.html" title="aor_charts" alt="" coords="1313,4947,1469,5035">
+<area shape="rect" id="node27" href="aor_conditions.html" title="aor_conditions" alt="" coords="1299,5085,1484,5173">
+<area shape="rect" id="node28" href="aor_fields.html" title="aor_fields" alt="" coords="1317,5191,1466,5279">
+<area shape="rect" id="node29" href="aor_scheduled_reports.html" title="aor_scheduled_reports" alt="" coords="1270,5296,1513,5384">
+<area shape="rect" id="node32" href="aos_contracts_am_projecttemplates_1_c.html" title="aos_contracts_am_projecttemplates_1_c" alt="" coords="1209,8511,1574,8599">
+<area shape="rect" id="node33" href="aos_contracts_am_projecttemplates_2_c.html" title="aos_contracts_am_projecttemplates_2_c" alt="" coords="1209,8616,1574,8704">
+<area shape="rect" id="node34" href="aos_contracts_documents.html" title="aos_contracts_documents" alt="" coords="1681,8539,1947,8627">
+<area shape="rect" id="node35" href="documents.html" title="documents" alt="" coords="1269,6225,1513,6489">
+<area shape="rect" id="node61" href="document_revisions.html" title="document_revisions" alt="" coords="861,6225,1084,6313">
+<area shape="rect" id="node36" href="aos_product_categories.html" title="aos_product_categories" alt="" coords="1683,9900,1945,10135">
+<area shape="rect" id="node37" href="aos_products.html" title="aos_products" alt="" coords="1256,9753,1527,9988">
+<area shape="rect" id="node38" href="aos_quotes_aos_invoices_c.html" title="aos_quotes_aos_invoices_c" alt="" coords="1253,10561,1530,10649">
+<area shape="rect" id="node39" href="aos_quotes_os_contracts_c.html" title="aos_quotes_os_contracts_c" alt="" coords="1253,9508,1530,9596">
+<area shape="rect" id="node40" href="aos_quotes_project_c.html" title="aos_quotes_project_c" alt="" coords="1697,9119,1931,9207">
+<area shape="rect" id="node41" href="aow_workflow.html" title="aow_workflow" alt="" coords="1713,5995,1915,6229">
+<area shape="rect" id="node42" href="aow_actions.html" title="aow_actions" alt="" coords="1307,5696,1475,5784">
+<area shape="rect" id="node43" href="aow_conditions.html" title="aow_conditions" alt="" coords="1296,5873,1487,5961">
+<area shape="rect" id="node44" href="aow_processed.html" title="aow_processed" alt="" coords="1297,5979,1486,6067">
+<area shape="rect" id="node46" href="calls_contacts.html" title="calls_contacts" alt="" coords="1723,1544,1905,1632">
+<area shape="rect" id="node47" href="calls_leads.html" title="calls_leads" alt="" coords="1313,604,1470,692">
+<area shape="rect" id="node48" href="calls_users.html" title="calls_users" alt="" coords="2405,2487,2565,2575">
+<area shape="rect" id="node50" href="campaigns.html" title="campaigns" alt="" coords="1707,8257,1921,8521">
+<area shape="rect" id="node54" href="prospects.html" title="prospects" alt="" coords="1239,889,1544,1241">
+<area shape="rect" id="node55" href="surveyresponses.html" title="surveyresponses" alt="" coords="1273,7695,1509,7959">
+<area shape="rect" id="node69" href="prospect_lists.html" title="prospect_lists" alt="" coords="1713,11248,1915,11424">
+<area shape="rect" id="node70" href="email_templates.html" title="email_templates" alt="" coords="1713,11055,1915,11231">
+<area shape="rect" id="node74" href="fp_event_locations.html" title="fp_event_locations" alt="" coords="1285,8189,1498,8277">
+<area shape="rect" id="node75" href="fp_events.html" title="fp_events" alt="" coords="1277,2088,1506,2293">
+<area shape="rect" id="node80" href="jjwg_maps.html" title="jjwg_maps" alt="" coords="1713,4057,1915,4292">
+<area shape="rect" id="node82" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="1713,1935,1915,2140">
+<area shape="rect" id="node84" href="jjwg_markers.html" title="jjwg_markers" alt="" coords="1713,2515,1915,2720">
+<area shape="rect" id="node102" href="securitygroups.html" title="securitygroups" alt="" coords="1713,10332,1915,10537">
+<area shape="rect" id="node105" href="aos_pdf_templates.html" title="aos_pdf_templates" alt="" coords="1705,2737,1923,2943">
+<area shape="rect" id="node106" href="spots.html" title="spots" alt="" coords="1713,6636,1915,6841">
+<area shape="rect" id="node107" href="surveyquestionoptions.html" title="surveyquestionoptions" alt="" coords="845,8941,1101,9176">
+<area shape="rect" id="node108" href="surveyquestionresponses.html" title="surveyquestionresponses" alt="" coords="833,7587,1113,7821">
+<area shape="rect" id="node109" href="surveyquestions.html" title="surveyquestions" alt="" coords="1278,9076,1505,9311">
+<area shape="rect" id="node110" href="surveys.html" title="surveys" alt="" coords="1713,8860,1915,9065">
+<area shape="rect" id="node51" href="campaign_trkrs.html" title="campaign_trkrs" alt="" coords="1297,8827,1486,8915">
+<area shape="rect" id="node52" href="email_marketing.html" title="email_marketing" alt="" coords="1293,10420,1489,10508">
+<area shape="rect" id="node53" href="emailman.html" title="emailman" alt="" coords="1317,8721,1465,8809">
+<area shape="rect" id="node57" href="cases_bugs.html" title="cases_bugs" alt="" coords="1732,3459,1896,3547">
+<area shape="rect" id="node58" href="contacts_bugs.html" title="contacts_bugs" alt="" coords="1722,3137,1906,3225">
+<area shape="rect" id="node59" href="contacts_cases.html" title="contacts_cases" alt="" coords="1719,2960,1909,3048">
+<area shape="rect" id="node60" href="contacts_users.html" title="contacts_users" alt="" coords="2391,2764,2579,2852">
+<area shape="rect" id="node62" href="documents_accounts.html" title="documents_accounts" alt="" coords="3063,5297,3293,5385">
+<area shape="rect" id="node63" href="documents_bugs.html" title="documents_bugs" alt="" coords="1713,4345,1915,4433">
+<area shape="rect" id="node64" href="documents_cases.html" title="documents_cases" alt="" coords="1711,5853,1917,5941">
+<area shape="rect" id="node65" href="documents_contacts.html" title="documents_contacts" alt="" coords="1701,3705,1927,3793">
+<area shape="rect" id="node66" href="documents_opportunities.html" title="documents_opportunities" alt="" coords="1683,7117,1945,7205">
+<area shape="rect" id="node67" href="email_addr_bean_rel.html" title="email_addr_bean_rel" alt="" coords="3065,1256,3291,1344">
+<area shape="rect" id="node68" href="email_marketing_prospect_lists.html" title="email_marketing_prospect_lists" alt="" coords="2021,11295,2324,11383">
+<area shape="rect" id="node71" href="emails_beans.html" title="emails_beans" alt="" coords="3090,6372,3266,6460">
+<area shape="rect" id="node92" href="tracker.html" title="tracker" alt="" coords="586,9269,715,9357">
+<area shape="rect" id="node73" href="fp_event_locations_fp_events_1_c.html" title="fp_event_locations_fp_events_1_c" alt="" coords="1653,5483,1975,5571">
+<area shape="rect" id="node76" href="fp_events_contacts_c.html" title="fp_events_contacts_c" alt="" coords="1697,1685,1931,1773">
+<area shape="rect" id="node77" href="fp_events_fp_event_locations_1_c.html" title="fp_events_fp_event_locations_1_c" alt="" coords="1653,5377,1975,5465">
+<area shape="rect" id="node78" href="fp_events_leads_1_c.html" title="fp_events_leads_1_c" alt="" coords="1701,1439,1927,1527">
+<area shape="rect" id="node79" href="fp_events_prospects_1_c.html" title="fp_events_prospects_1_c" alt="" coords="1685,1153,1943,1241">
+<area shape="rect" id="node81" href="jjwg_maps_jjwg_areas_c.html" title="jjwg_maps_jjwg_areas_c" alt="" coords="2046,2515,2299,2603">
+<area shape="rect" id="node83" href="jjwg_maps_jjwg_markers_c.html" title="jjwg_maps_jjwg_markers_c" alt="" coords="2037,3675,2309,3763">
+<area shape="rect" id="node85" href="linked_documents.html" title="linked_documents" alt="" coords="1709,5748,1919,5836">
+<area shape="rect" id="node86" href="meetings_contacts.html" title="meetings_contacts" alt="" coords="1707,3564,1921,3652">
+<area shape="rect" id="node87" href="meetings_leads.html" title="meetings_leads" alt="" coords="1297,6084,1486,6172">
+<area shape="rect" id="node88" href="meetings_users.html" title="meetings_users" alt="" coords="2389,7436,2581,7524">
+<area shape="rect" id="node90" href="opportunities_contacts.html" title="opportunities_contacts" alt="" coords="1693,4592,1935,4680">
+<area shape="rect" id="node91" href="project_contacts_1_c.html" title="project_contacts_1_c" alt="" coords="1699,4487,1929,4575">
+<area shape="rect" id="node93" href="project_users_1_c.html" title="project_users_1_c" alt="" coords="2380,7151,2589,7239">
+<area shape="rect" id="node94" href="projects_accounts.html" title="projects_accounts" alt="" coords="3073,6764,3283,6852">
+<area shape="rect" id="node95" href="projects_bugs.html" title="projects_bugs" alt="" coords="1723,4805,1905,4893">
+<area shape="rect" id="node96" href="projects_cases.html" title="projects_cases" alt="" coords="1721,6495,1907,6583">
+<area shape="rect" id="node97" href="projects_contacts.html" title="projects_contacts" alt="" coords="1711,3952,1917,4040">
+<area shape="rect" id="node98" href="projects_opportunities.html" title="projects_opportunities" alt="" coords="1694,7580,1934,7668">
+<area shape="rect" id="node99" href="prospect_list_campaigns.html" title="prospect_list_campaigns" alt="" coords="2045,9509,2301,9597">
+<area shape="rect" id="node100" href="prospect_lists_prospects.html" title="prospect_lists_prospects" alt="" coords="3049,1891,3307,1979">
+<area shape="rect" id="node101" href="releases.html" title="releases" alt="" coords="1745,3811,1883,3899">
+<area shape="rect" id="node103" href="securitygroups_acl_roles.html" title="securitygroups_acl_roles" alt="" coords="2044,10377,2301,10465">
+<area shape="rect" id="node104" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="3001,7513,3355,7817">
+<area shape="rect" id="node111" href="securitygroups_users.html" title="securitygroups_users" alt="" coords="2368,8348,2601,8436">
+<area shape="rect" id="node112" href="surveyquestionoptions_surveyquestionresponses.html" title="surveyquestionoptions_surveyquestionresponses" alt="" coords="1176,8048,1607,8136">
+</map>
+
+					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/securitygroups_records.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc2</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>
