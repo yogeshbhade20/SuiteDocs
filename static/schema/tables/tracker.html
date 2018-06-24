@@ -114,22 +114,6 @@
 				 <td>null</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td title="project_task.parent_task_id&#39;s name implies that it&#39;s a child of tracker.id, but it doesn&#39;t reference that column.">
-						<a href='project_task.html'>project_task</a><span class='relatedKey'>.parent_task_id</span>
-					</td>
-					<td class="constraint detail">
-						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
-					</td>
-				   </tr>
-				   <tr>
-					<td title="project_task.project_task_id&#39;s name implies that it&#39;s a child of tracker.id, but it doesn&#39;t reference that column.">
-						<a href='project_task.html'>project_task</a><span class='relatedKey'>.project_task_id</span>
-					</td>
-					<td class="constraint detail">
-						Implied Constraint <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
-					</td>
-				   </tr>
 				  </table>				 
 				 </td>
 				 <td>
@@ -310,7 +294,7 @@
 				</tr>
 								</tbody>
 				</table>
-				<p title='11 columns'>Table contained <span id="recordNumber">54</span> rows<p/>
+				<p title='11 columns'>Table contained <span id="recordNumber">55</span> rows<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -375,64 +359,6 @@
 				</tbody>
 				</table>   			  
 			</div><!-- /.box-body -->
-		</div>
-				<div class="box box-primary">		
-			<div class="box-header with-border">
-              <i class="fa fa-code-fork"></i>
-
-              <h3 id="Relationships" class="box-title">Relationships</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>	
-			<div class="box-body">	
-			<div class="nav-tabs-custom" style="cursor: move;">
-            <!-- Tabs within a box -->
-			<h5>Close relationships within degrees of separation</h5>
-            <ul class="nav nav-tabs pull-left ui-sortable-handle">
-			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
-			  			              <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>			  			 
-			  			              <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>			  			 
-            </ul>
-            <div class="tab-content no-padding">            
-				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
-					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="tracker.html" title="tracker" alt="" coords="5,5,281,397">
-</map>
-
-					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/tracker.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
-				</div>
-				<div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
-					<map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="project_task.html" title="project_task" alt="" coords="325,5,535,299">
-<area shape="rect" id="node2" href="tracker.html" title="tracker" alt="" coords="5,76,281,468">
-</map>
-
-					<a name='diagram'><img id='oneimpliedDegreeImg' src='../diagrams/tracker.implied1degrees.png' usemap='#oneDegreeRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
-				</div>
-				<div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">					
-					<map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="calls.html" title="calls" alt="" coords="443,475,583,563">
-<area shape="rect" id="node2" href="notes.html" title="notes" alt="" coords="5,475,141,563">
-<area shape="rect" id="node3" href="emails.html" title="emails" alt="" coords="439,370,587,458">
-<area shape="rect" id="node4" href="meetings.html" title="meetings" alt="" coords="185,511,331,599">
-<area shape="rect" id="node5" href="emails_beans.html" title="emails_beans" alt="" coords="1425,319,1601,407">
-<area shape="rect" id="node6" href="project.html" title="project" alt="" coords="948,319,1088,407">
-<area shape="rect" id="node7" href="project_task.html" title="project_task" alt="" coords="695,597,904,890">
-<area shape="rect" id="node8" href="tasks.html" title="tasks" alt="" coords="439,83,587,171">
-<area shape="rect" id="node9" href="users.html" title="users" alt="" coords="1179,507,1335,595">
-<area shape="rect" id="node10" href="tracker.html" title="tracker" alt="" coords="375,653,651,1045">
-<area shape="rect" id="node11" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1132,179,1381,267">
-</map>
-
-					<a name='diagram'><img id='twoimpliedDegreeImg' src='../diagrams/tracker.implied2degrees.png' usemap='#twoDegreesRelationshipsDiagramImplied' class='diagram' border='0' alt='' align='left'></a>							
-				</div>
-			  			</div>
-			</div>
-		  </div><!-- /.box-body -->
 		</div>
 	      </section>
     

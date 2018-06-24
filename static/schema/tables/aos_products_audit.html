@@ -123,7 +123,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="parent_id">parent_id</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="parent_id">parent_id</span></td>
 				 <td>CHAR</td>
 				 <td>36</td>
 				 <td title=''></td>
@@ -135,6 +135,14 @@
 				 </td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="aos_products_audit.parent_id references aos_products.id">
+						<a href='aos_products.html'>aos_products</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
 				  </table>					 
 				 </td>
 				 <td></td>
@@ -318,6 +326,51 @@
 				</tbody>
 				</table>   			  
 			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="aos_products_audit.html" title="aos_products_audit" alt="" coords="320,5,641,368">
+<area shape="rect" id="node2" href="aos_products.html" title="aos_products" alt="" coords="5,37,276,272">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/aos_products_audit.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="aos_product_categories.html" title="aos_product_categories" alt="" coords="633,463,883,551">
+<area shape="rect" id="node2" href="aos_products.html" title="aos_products" alt="" coords="283,424,553,659">
+<area shape="rect" id="node3" href="aos_products_quotes.html" title="aos_products_quotes" alt="" coords="5,655,239,743">
+<area shape="rect" id="node4" href="aos_products_audit.html" title="aos_products_audit" alt="" coords="597,83,919,446">
+<area shape="rect" id="node5" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="963,236,1212,324">
+<area shape="rect" id="node6" href="users.html" title="users" alt="" coords="1027,567,1148,655">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/aos_products_audit.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
 		</div>
 	      </section>
     

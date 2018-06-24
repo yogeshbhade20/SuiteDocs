@@ -123,7 +123,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="parent_id">parent_id</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="parent_id">parent_id</span></td>
 				 <td>CHAR</td>
 				 <td>36</td>
 				 <td title=''></td>
@@ -135,6 +135,14 @@
 				 </td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="jjwg_areas_audit.parent_id references jjwg_areas.id">
+						<a href='jjwg_areas.html'>jjwg_areas</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
 				  </table>					 
 				 </td>
 				 <td></td>
@@ -277,7 +285,7 @@
 				</tr>
 								</tbody>
 				</table>
-				<p title='10 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+				<p title='10 columns'>Table contained <span id="recordNumber">-1</span> rows<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -318,6 +326,50 @@
 				</tbody>
 				</table>   			  
 			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="jjwg_areas_audit.html" title="jjwg_areas_audit" alt="" coords="251,5,572,368">
+<area shape="rect" id="node2" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="5,37,207,243">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/jjwg_areas_audit.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="jjwg_areas_audit.html" title="jjwg_areas_audit" alt="" coords="251,5,572,368">
+<area shape="rect" id="node2" href="jjwg_areas.html" title="jjwg_areas" alt="" coords="5,497,207,703">
+<area shape="rect" id="node3" href="jjwg_maps_jjwg_areas_c.html" title="jjwg_maps_jjwg_areas_c" alt="" coords="285,385,538,473">
+<area shape="rect" id="node4" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="287,491,536,579">
+<area shape="rect" id="node5" href="users.html" title="users" alt="" coords="351,596,472,684">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/jjwg_areas_audit.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
 		</div>
 	      </section>
     

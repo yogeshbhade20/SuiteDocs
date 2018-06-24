@@ -123,7 +123,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="parent_id">parent_id</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="parent_id">parent_id</span></td>
 				 <td>CHAR</td>
 				 <td>36</td>
 				 <td title=''></td>
@@ -135,6 +135,14 @@
 				 </td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="project_task_audit.parent_id references project_task.id">
+						<a href='project_task.html'>project_task</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
 				  </table>					 
 				 </td>
 				 <td></td>
@@ -318,6 +326,56 @@
 				</tbody>
 				</table>   			  
 			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="project_task_audit.html" title="project_task_audit" alt="" coords="259,5,580,368">
+<area shape="rect" id="node2" href="project_task.html" title="project_task" alt="" coords="5,37,215,272">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/project_task_audit.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="calls.html" title="calls" alt="" coords="365,972,478,1060">
+<area shape="rect" id="node2" href="notes.html" title="notes" alt="" coords="5,865,125,953">
+<area shape="rect" id="node3" href="emails.html" title="emails" alt="" coords="359,762,484,850">
+<area shape="rect" id="node4" href="meetings.html" title="meetings" alt="" coords="169,830,315,918">
+<area shape="rect" id="node5" href="emails_beans.html" title="emails_beans" alt="" coords="1440,388,1616,476">
+<area shape="rect" id="node6" href="project.html" title="project" alt="" coords="877,388,1007,476">
+<area shape="rect" id="node7" href="project_task.html" title="project_task" alt="" coords="528,793,737,1028">
+<area shape="rect" id="node8" href="tasks.html" title="tasks" alt="" coords="363,248,480,336">
+<area shape="rect" id="node9" href="users.html" title="users" alt="" coords="1211,1032,1332,1120">
+<area shape="rect" id="node10" href="project_task_audit.html" title="project_task_audit" alt="" coords="781,565,1103,928">
+<area shape="rect" id="node11" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1147,210,1396,298">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/project_task_audit.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
 		</div>
 	      </section>
     

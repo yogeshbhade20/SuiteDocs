@@ -123,7 +123,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="parent_id">parent_id</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="parent_id">parent_id</span></td>
 				 <td>CHAR</td>
 				 <td>36</td>
 				 <td title=''></td>
@@ -135,6 +135,14 @@
 				 </td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="surveys_audit.parent_id references surveys.id">
+						<a href='surveys.html'>surveys</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
 				  </table>					 
 				 </td>
 				 <td></td>
@@ -277,7 +285,7 @@
 				</tr>
 								</tbody>
 				</table>
-				<p title='10 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+				<p title='10 columns'>Table contained <span id="recordNumber">-1</span> rows<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -318,6 +326,51 @@
 				</tbody>
 				</table>   			  
 			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="surveys_audit.html" title="surveys_audit" alt="" coords="251,5,572,368">
+<area shape="rect" id="node2" href="surveys.html" title="surveys" alt="" coords="5,37,207,243">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/surveys_audit.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="532,5,781,93">
+<area shape="rect" id="node2" href="surveyquestions.html" title="surveyquestions" alt="" coords="7,385,205,473">
+<area shape="rect" id="node3" href="surveyresponses.html" title="surveyresponses" alt="" coords="5,491,207,579">
+<area shape="rect" id="node4" href="surveys.html" title="surveys" alt="" coords="251,221,452,427">
+<area shape="rect" id="node5" href="surveys_audit.html" title="surveys_audit" alt="" coords="496,111,817,473">
+<area shape="rect" id="node6" href="users.html" title="users" alt="" coords="596,491,717,579">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/surveys_audit.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
 		</div>
 	      </section>
     

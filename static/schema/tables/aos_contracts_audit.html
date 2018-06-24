@@ -123,7 +123,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="parent_id">parent_id</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="parent_id">parent_id</span></td>
 				 <td>CHAR</td>
 				 <td>36</td>
 				 <td title=''></td>
@@ -135,6 +135,14 @@
 				 </td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="aos_contracts_audit.parent_id references aos_contracts.id">
+						<a href='aos_contracts.html'>aos_contracts</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
 				  </table>					 
 				 </td>
 				 <td></td>
@@ -277,7 +285,7 @@
 				</tr>
 								</tbody>
 				</table>
-				<p title='10 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
+				<p title='10 columns'>Table contained <span id="recordNumber">-1</span> rows<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -318,6 +326,64 @@
 				</tbody>
 				</table>   			  
 			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="aos_contracts_audit.html" title="aos_contracts_audit" alt="" coords="361,5,684,368">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="5,37,317,331">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/aos_contracts_audit.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="1027,1530,1173,1618">
+<area shape="rect" id="node2" href="aos_contracts.html" title="aos_contracts" alt="" coords="561,1043,873,1337">
+<area shape="rect" id="node3" href="calls.html" title="calls" alt="" coords="343,1267,457,1355">
+<area shape="rect" id="node4" href="meetings.html" title="meetings" alt="" coords="327,1467,473,1555">
+<area shape="rect" id="node5" href="notes.html" title="notes" alt="" coords="62,1534,182,1622">
+<area shape="rect" id="node6" href="tasks.html" title="tasks" alt="" coords="341,1689,459,1777">
+<area shape="rect" id="node7" href="aos_line_item_groups.html" title="aos_line_item_groups" alt="" coords="283,150,517,238">
+<area shape="rect" id="node8" href="aos_products_quotes.html" title="aos_products_quotes" alt="" coords="5,61,239,149">
+<area shape="rect" id="node9" href="aos_contracts_am_projecttemplates_1_c.html" title="aos_contracts_am_projecttemplates_1_c" alt="" coords="917,517,1283,605">
+<area shape="rect" id="node10" href="aos_contracts_am_projecttemplates_2_c.html" title="aos_contracts_am_projecttemplates_2_c" alt="" coords="917,622,1283,710">
+<area shape="rect" id="node11" href="aos_contracts_audit.html" title="aos_contracts_audit" alt="" coords="939,727,1261,1090">
+<area shape="rect" id="node12" href="aos_contracts_cstm.html" title="aos_contracts_cstm" alt="" coords="989,1107,1211,1195">
+<area shape="rect" id="node13" href="aos_contracts_documents.html" title="aos_contracts_documents" alt="" coords="967,1213,1233,1301">
+<area shape="rect" id="node14" href="aos_quotes_os_contracts_c.html" title="aos_quotes_os_contracts_c" alt="" coords="961,411,1239,499">
+<area shape="rect" id="node15" href="contacts.html" title="contacts" alt="" coords="1029,1881,1171,1969">
+<area shape="rect" id="node16" href="emails_beans.html" title="emails_beans" alt="" coords="1620,1650,1796,1738">
+<area shape="rect" id="node17" href="opportunities.html" title="opportunities" alt="" coords="1013,1703,1187,1791">
+<area shape="rect" id="node18" href="users.html" title="users" alt="" coords="1391,1441,1512,1529">
+<area shape="rect" id="node19" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1327,1790,1576,1878">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/aos_contracts_audit.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
 		</div>
 	      </section>
     
