@@ -1,0 +1,559 @@
+<schemaMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schemaspy.org/xsd/6/schemameta.xsd" ><comments>SuiteCRM Database Schema</comments><tables>
+<table name="prospects"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyresponses" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_contracts"><column name="id" type="INT"><foreignKey table="aos_line_item_groups" column="parent_id"  /></column></table>
+<table name="prospects"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="documents" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyresponses" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="prospects"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="documents" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyresponses" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="prospects"><column name="id" type="INT"><foreignKey table="calls" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_invoices" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="prospects"><column name="id" type="INT"><foreignKey table="emails" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_invoices" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="surveyresponses"><column name="id" type="INT"><foreignKey table="surveyquestionresponses" column="surveyresponse_id"  /></column></table>
+<table name="prospects"><column name="id" type="INT"><foreignKey table="campaign_log" column="target_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_invoices" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="documents"><column name="id" type="INT"><foreignKey table="document_revisions" column="document_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveys" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_contracts" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="email_templates"><column name="id" type="INT"><foreignKey table="email_marketing" column="template_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="document_revisions" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveys" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveys" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_invoices"><column name="id" type="INT"><foreignKey table="aos_products_quotes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="inbound_email" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="campaign_trkrs" column="campaign_id"  /></column></table>
+<table name="aos_invoices"><column name="id" type="INT"><foreignKey table="aos_line_item_groups" column="parent_id"  /></column></table>
+<table name="surveys"><column name="id" type="INT"><foreignKey table="surveyquestions" column="survey_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="inbound_email" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="surveys"><column name="id" type="INT"><foreignKey table="surveyresponses" column="survey_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_pdf_templates" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="saved_search" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="tasks"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="schedulers" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="leads" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyquestionresponses" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="schedulers" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="leads" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_pdf_templates" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="schedulers"><column name="id" type="INT"><foreignKey table="job_queue" column="scheduler_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="leads" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyquestionresponses" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_pdf_templates" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="spots" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyquestionresponses" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="job_queue" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_product_categories" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth2tokens" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="contacts" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_product_categories" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyquestions" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="contacts" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_product_categories" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="leads"><column name="id" type="INT"><foreignKey table="leads" column="reports_to_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="contacts" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="leads"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyquestions" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="spots" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="spots" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyquestions" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="leads"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="aos_product_categories"><column name="id" type="INT"><foreignKey table="aos_product_categories" column="parent_category_id"  /></column></table>
+<table name="leads"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="surveyquestions"><column name="id" type="INT"><foreignKey table="surveyquestionoptions" column="survey_question_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aobh_businesshours" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="contacts" column="reports_to_id"  /></column></table>
+<table name="leads"><column name="id" type="INT"><foreignKey table="calls" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_products" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aobh_businesshours" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="leads"><column name="id" type="INT"><foreignKey table="emails" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyquestionoptions" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="leads" column="contact_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_products" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="leads"><column name="id" type="INT"><foreignKey table="campaign_log" column="target_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyquestionoptions" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="notes" column="contact_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="sugarfeed" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_products" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="surveyquestionoptions" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="tasks" column="contact_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="cases" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="sugarfeed" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="sugarfeed" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="cases" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="aos_product_categories"><column name="id" type="INT"><foreignKey table="aos_products" column="aos_product_category_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="eapm" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth2tokens" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_products_quotes" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="cases" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="eapm" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_products_quotes" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="eapm" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="campaign_log" column="target_id"  /></column></table>
+<table name="cases"><column name="id" type="INT"><foreignKey table="calls" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_products_quotes" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth_consumer" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="cases"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="aos_quotes" column="billing_contact_id"  /></column></table>
+<table name="aos_products"><column name="id" type="INT"><foreignKey table="aos_products_quotes" column="product_id"  /></column></table>
+<table name="aos_contracts"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth_consumer" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="cases"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="aos_invoices" column="billing_contact_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_line_item_groups" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="cases"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth_consumer" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="aos_contracts" column="contact_id"  /></column></table>
+<table name="cases"><column name="id" type="INT"><foreignKey table="emails" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_line_item_groups" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="aop_case_updates" column="contact_id"  /></column></table>
+<table name="oauth_consumer"><column name="id" type="INT"><foreignKey table="oauth_tokens" column="consumer"  /></column></table>
+<table name="contacts"><column name="id" type="INT"><foreignKey table="cases" column="contact_created_by_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_line_item_groups" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth_tokens" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_line_item_groups"><column name="id" type="INT"><foreignKey table="aos_products_quotes" column="group_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="am_projecttemplates" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="accounts" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="bugs" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_quotes" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="am_projecttemplates" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="accounts" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_quotes" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="am_projecttemplates" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="bugs" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="accounts" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_quotes" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="bugs" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="am_tasktemplates" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="am_tasktemplates" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_quotes"><column name="id" type="INT"><foreignKey table="aos_products_quotes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="am_tasktemplates" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="bugs"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="accounts" column="parent_id"  /></column></table>
+<table name="aos_quotes"><column name="id" type="INT"><foreignKey table="aos_line_item_groups" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="favorites" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="cases" column="account_id"  /></column></table>
+<table name="bugs"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="alerts" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aow_actions" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="bugs"><column name="id" type="INT"><foreignKey table="calls" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="favorites" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="bugs"><column name="id" type="INT"><foreignKey table="emails" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="favorites" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aow_actions" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="bugs"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aok_knowledge_base_categories" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="calls" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth2clients" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aow_workflow" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="releases"><column name="id" type="INT"><foreignKey table="bugs" column="found_in_release"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aok_knowledge_base_categories" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="emails" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aok_knowledge_base_categories" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="releases"><column name="id" type="INT"><foreignKey table="bugs" column="fixed_in_release"  /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="leads" column="account_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aow_workflow" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aok_knowledgebase" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aow_workflow" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="campaign_log" column="target_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="users" column="reports_to_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aok_knowledgebase" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="aos_quotes" column="billing_account_id"  /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="aos_invoices" column="billing_account_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aok_knowledgebase" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts"><column name="id" type="INT"><foreignKey table="aos_contracts" column="contract_account_id"  /></column></table>
+<table name="campaign_log"><column name="related_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="reminders" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="opportunities" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaign_log"><column name="related_id" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="reminders" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aow_workflow"><column name="id" type="INT"><foreignKey table="aow_conditions" column="aow_workflow_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="opportunities" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="reminders" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaign_log"><column name="related_id" type="INT"><foreignKey table="opportunities" column="id"  /></column></table>
+<table name="aow_workflow"><column name="id" type="INT"><foreignKey table="aow_actions" column="aow_workflow_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="opportunities" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="reminders_invitees" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaign_log"><column name="target_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="aow_workflow"><column name="id" type="INT"><foreignKey table="aow_processed" column="aow_workflow_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="reminders_invitees" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaign_log"><column name="related_id" type="INT"><foreignKey table="emails" column="id"  /></column></table>
+<table name="opportunities"><column name="id" type="INT"><foreignKey table="calls" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aow_processed" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="reminders_invitees" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aow_processed" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="opportunities"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="fp_events" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="alerts" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="project"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aow_conditions" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="opportunities"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="aos_contracts"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aow_conditions" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="project"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="opportunities"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="fp_events" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth2clients" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="project"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="opportunities"><column name="id" type="INT"><foreignKey table="emails" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="fp_events" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="project"><column name="id" type="INT"><foreignKey table="calls" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_maps" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="opportunities"><column name="id" type="INT"><foreignKey table="leads" column="opportunity_id"  /></column></table>
+<table name="project"><column name="id" type="INT"><foreignKey table="emails" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_maps" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="project"><column name="id" type="INT"><foreignKey table="project_task" column="project_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="fp_event_locations" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="project" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_maps" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="fp_event_locations" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="project" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="opportunities"><column name="currency_id" type="INT"><foreignKey table="currencies" column="id"  /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="opportunities" column="campaign_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="project" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="fp_event_locations" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="jjwg_Maps"><column name="parent_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="opportunities"><column name="id" type="INT"><foreignKey table="aos_quotes" column="opportunity_id"  /></column></table>
+<table name="jjwg_Maps"><column name="parent_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="opportunities"><column name="id" type="INT"><foreignKey table="aos_contracts" column="opportunity_id"  /></column></table>
+<table name="jjwg_Maps"><column name="parent_id" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="jjwg_Maps"><column name="parent_id" type="INT"><foreignKey table="opportunities" column="id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aod_indexevent" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="jjwg_Maps"><column name="parent_id" type="INT"><foreignKey table="cases" column="id"  /></column></table>
+<table name="project_task"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aod_indexevent" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="jjwg_Maps"><column name="parent_id" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aod_indexevent" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="project_task"><column name="id" type="INT"><foreignKey table="tasks" column="parent_id"  /></column></table>
+<table name="jjwg_Maps"><column name="parent_id" type="INT"><foreignKey table="meetings" column="id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="email_templates" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="alerts" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="project_task"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="jjwg_Maps"><column name="parent_id" type="INT"><foreignKey table="prospects" column="id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aod_index" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="notes" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aod_index" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_contracts"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="oauth2clients"><column name="id" type="INT"><foreignKey table="oauth2tokens" column="client"  /></column></table>
+<table name="project_task"><column name="id" type="INT"><foreignKey table="calls" column="parent_id"  /></column></table>
+<table name="project_task"><column name="id" type="INT"><foreignKey table="emails" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_markers" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aod_index" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="notes" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="project_task" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_markers" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aop_case_events" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="project_task" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="notes" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_markers" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aop_case_events" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="project_task" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="calls" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aop_case_events" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="campaigns" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="calls" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="cases"><column name="id" type="INT"><foreignKey table="aop_case_events" column="case_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="calls" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aop_case_updates" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_areas" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="campaigns" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aop_case_updates" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_areas" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="campaigns" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="calls"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aop_case_updates" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_areas" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="calls"><column name="id" type="INT"><foreignKey table="calls_reschedule" column="call_id"  /></column></table>
+<table name="cases"><column name="id" type="INT"><foreignKey table="aop_case_updates" column="case_id"  /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="accounts" column="campaign_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="emails" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="contacts" column="campaign_id"  /></column></table>
+<table name="aop_case_updates"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="emails" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="leads" column="campaign_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_reports" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="emails" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="prospects" column="campaign_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_reports" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="emails"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_reports" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="email_marketing" column="campaign_id"  /></column></table>
+<table name="aor_reports"><column name="id" type="INT"><foreignKey table="aor_fields" column="aor_report_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_address_cache" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aor_reports"><column name="id" type="INT"><foreignKey table="aor_conditions" column="aor_report_id"  /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="emailman" column="campaign_id"  /></column></table>
+<table name="aor_reports"><column name="id" type="INT"><foreignKey table="aor_scheduled_reports" column="aor_report_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_address_cache" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="campaign_log" column="campaign_id"  /></column></table>
+<table name="emails"><column name="id" type="INT"><foreignKey table="meetings" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="jjwg_address_cache" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_fields" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="calls_reschedule" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_fields" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_contracts"><column name="id" type="INT"><foreignKey table="calls" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="meetings" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="calls_reschedule" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_charts" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth2tokens" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="calls_reschedule" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_charts" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="meetings" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="oauth2clients" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaigns"><column name="id" type="INT"><foreignKey table="surveyresponses" column="campaign_id"  /></column></table>
+<table name="aor_reports"><column name="id" type="INT"><foreignKey table="aor_charts" column="aor_report_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="securitygroups" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="meetings" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="securitygroups" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_conditions" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="prospect_lists" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="meetings"><column name="id" type="INT"><foreignKey table="notes" column="parent_id"  /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="securitygroups" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_conditions" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="outbound_email" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_scheduled_reports" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="outbound_email" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="tasks" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="outbound_email" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aor_scheduled_reports" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="tasks" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="prospects" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="tasks" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="templatesectionline" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_contracts" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="prospects" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="templatesectionline" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="aos_contracts" column="created_by" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="prospects" column="assigned_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="users"><column name="id" type="INT"><foreignKey table="documents" column="modified_user_id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_contracts"><column name="id" type="INT"><foreignKey table="aos_products_quotes" column="parent_id"  /></column></table>
+<table name="surveyquestionoptions_surveyquestionresponses"><column name="surveyq72c7options_ida" type="INT"><foreignKey table="surveyquestionoptions" column="id"  /></column></table>
+<table name="aos_contracts_am_projecttemplates_2_c"><column name="aos_contracts_am_projecttemplates_2aos_contracts_ida" type="INT"><foreignKey table="aos_contracts" column="id"  /></column></table>
+<table name="project_users_1_c"><column name="project_users_1project_ida" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="aos_contracts_am_projecttemplates_1_c"><column name="aos_contracts_am_projecttemplates_1aos_contracts_ida" type="INT"><foreignKey table="aos_contracts" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="securitygroup_id" type="INT"><foreignKey table="securitygroups" column="id"  /></column></table>
+<table name="email_addr_bean_rel"><column name="bean_id" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="securitygroups_acl_roles"><column name="securitygroup_id" type="INT"><foreignKey table="securitygroups" column="id"  /></column></table>
+<table name="email_addr_bean_rel"><column name="bean_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="accounts_bugs"><column name="account_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="accounts_contacts"><column name="account_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="accounts_opportunities"><column name="account_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="calls_contacts"><column name="call_id" type="INT"><foreignKey table="calls" column="id"  /></column></table>
+<table name="calls_users"><column name="call_id" type="INT"><foreignKey table="calls" column="id"  /></column></table>
+<table name="calls_leads"><column name="call_id" type="INT"><foreignKey table="calls" column="id"  /></column></table>
+<table name="cases_bugs"><column name="case_id" type="INT"><foreignKey table="cases" column="id"  /></column></table>
+<table name="contacts_bugs"><column name="contact_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="contacts_cases"><column name="contact_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="contacts_users"><column name="contact_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="emails_beans"><column name="email_id" type="INT"><foreignKey table="emails" column="id"  /></column></table>
+<table name="email_addr_bean_rel"><column name="bean_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="email_addr_bean_rel"><column name="bean_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="meetings_contacts"><column name="meeting_id" type="INT"><foreignKey table="meetings" column="id"  /></column></table>
+<table name="meetings_users"><column name="meeting_id" type="INT"><foreignKey table="meetings" column="id"  /></column></table>
+<table name="meetings_leads"><column name="meeting_id" type="INT"><foreignKey table="meetings" column="id"  /></column></table>
+<table name="opportunities_contacts"><column name="opportunity_id" type="INT"><foreignKey table="opportunities" column="id"  /></column></table>
+<table name="prospect_list_campaigns"><column name="prospect_list_id" type="INT"><foreignKey table="prospect_lists" column="id"  /></column></table>
+<table name="prospect_lists_prospects"><column name="prospect_list_id" type="INT"><foreignKey table="prospect_lists" column="id"  /></column></table>
+<table name="roles_users"><column name="role_id" type="INT"><foreignKey table="roles" column="id"  /></column></table>
+<table name="projects_bugs"><column name="project_id" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="projects_cases"><column name="project_id" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="projects_accounts"><column name="project_id" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="projects_contacts"><column name="project_id" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="projects_opportunities"><column name="project_id" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="acl_roles_actions"><column name="role_id" type="INT"><foreignKey table="acl_roles" column="id"  /></column></table>
+<table name="acl_roles_users"><column name="role_id" type="INT"><foreignKey table="acl_roles" column="id"  /></column></table>
+<table name="email_marketing_prospect_lists"><column name="email_marketing_id" type="INT"><foreignKey table="email_marketing" column="id"  /></column></table>
+<table name="linked_documents"><column name="parent_id" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="documents_accounts"><column name="document_id" type="INT"><foreignKey table="documents" column="id"  /></column></table>
+<table name="documents_contacts"><column name="document_id" type="INT"><foreignKey table="documents" column="id"  /></column></table>
+<table name="documents_opportunities"><column name="document_id" type="INT"><foreignKey table="documents" column="id"  /></column></table>
+<table name="documents_cases"><column name="document_id" type="INT"><foreignKey table="documents" column="id"  /></column></table>
+<table name="documents_bugs"><column name="document_id" type="INT"><foreignKey table="documents" column="id"  /></column></table>
+<table name="email_addr_bean_rel"><column name="bean_id" type="INT"><foreignKey table="prospects" column="id"  /></column></table>
+<table name="aok_knowledgebase_categories"><column name="aok_knowledgebase_id" type="INT"><foreignKey table="aok_knowledgebase" column="id"  /></column></table>
+<table name="am_projecttemplates_project_1_c"><column name="am_projecttemplates_project_1am_projecttemplates_ida" type="INT"><foreignKey table="am_projecttemplates" column="id"  /></column></table>
+<table name="am_projecttemplates_contacts_1_c"><column name="am_projecttemplates_ida" type="INT"><foreignKey table="am_projecttemplates" column="id"  /></column></table>
+<table name="am_projecttemplates_users_1_c"><column name="am_projecttemplates_ida" type="INT"><foreignKey table="am_projecttemplates" column="id"  /></column></table>
+<table name="am_tasktemplates_am_projecttemplates_c"><column name="am_tasktemplates_am_projecttemplatesam_projecttemplates_ida" type="INT"><foreignKey table="am_projecttemplates" column="id"  /></column></table>
+<table name="aos_contracts_documents"><column name="aos_contracts_id" type="INT"><foreignKey table="aos_contracts" column="id"  /></column></table>
+<table name="aos_quotes_os_contracts_c"><column name="aos_quotese81e_quotes_ida" type="INT"><foreignKey table="aos_quotes" column="id"  /></column></table>
+<table name="aos_quotes_aos_invoices_c"><column name="aos_quotes77d9_quotes_ida" type="INT"><foreignKey table="aos_quotes" column="id"  /></column></table>
+<table name="aos_quotes_project_c"><column name="aos_quotes1112_quotes_ida" type="INT"><foreignKey table="aos_quotes" column="id"  /></column></table>
+<table name="aow_processed_aow_actions"><column name="aow_processed_id" type="INT"><foreignKey table="aow_processed" column="id"  /></column></table>
+<table name="fp_event_locations_fp_events_1_c"><column name="fp_event_locations_fp_events_1fp_event_locations_ida" type="INT"><foreignKey table="fp_event_locations" column="id"  /></column></table>
+<table name="securitygroups_users"><column name="securitygroup_id" type="INT"><foreignKey table="securitygroups" column="id"  /></column></table>
+<table name="fp_events_contacts_c"><column name="fp_events_contactsfp_events_ida" type="INT"><foreignKey table="fp_events" column="id"  /></column></table>
+<table name="fp_events_fp_event_locations_1_c"><column name="fp_events_fp_event_locations_1fp_events_ida" type="INT"><foreignKey table="fp_events" column="id"  /></column></table>
+<table name="fp_events_leads_1_c"><column name="fp_events_leads_1fp_events_ida" type="INT"><foreignKey table="fp_events" column="id"  /></column></table>
+<table name="fp_events_prospects_1_c"><column name="fp_events_prospects_1fp_events_ida" type="INT"><foreignKey table="fp_events" column="id"  /></column></table>
+<table name="jjwg_maps_jjwg_areas_c"><column name="jjwg_maps_5304wg_maps_ida" type="INT"><foreignKey table="jjwg_maps" column="id"  /></column></table>
+<table name="jjwg_maps_jjwg_markers_c"><column name="jjwg_maps_b229wg_maps_ida" type="INT"><foreignKey table="jjwg_maps" column="id"  /></column></table>
+<table name="project_contacts_1_c"><column name="project_contacts_1project_ida" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="surveyquestionoptions_surveyquestionresponses"><column name="surveyq10d4sponses_idb" type="INT"><foreignKey table="surveyquestionresponses" column="id"  /></column></table>
+<table name="aos_contracts_am_projecttemplates_2_c"><column name="aos_contracts_am_projecttemplates_2am_projecttemplates_idb" type="INT"><foreignKey table="am_projecttemplates" column="id"  /></column></table>
+<table name="project_users_1_c"><column name="project_users_1users_idb" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="aos_contracts_am_projecttemplates_1_c"><column name="aos_contracts_am_projecttemplates_1am_projecttemplates_idb" type="INT"><foreignKey table="am_projecttemplates" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="surveyresponses" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="documents" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="aos_invoices" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="surveys" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="aos_pdf_templates" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="surveyquestionresponses" column="id"  /></column></table>
+<table name="email_addr_bean_rel"><column name="email_address_id" type="INT"><foreignKey table="email_addresses" column="id"  /></column></table>
+<table name="securitygroups_acl_roles"><column name="role_id" type="INT"><foreignKey table="acl_roles" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="aos_product_categories" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="aos_contracts" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="surveyquestions" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="spots" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="aos_products" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="surveyquestionoptions" column="id"  /></column></table>
+<table name="accounts_bugs"><column name="bug_id" type="INT"><foreignKey table="bugs" column="id"  /></column></table>
+<table name="accounts_contacts"><column name="contact_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="accounts_opportunities"><column name="opportunity_id" type="INT"><foreignKey table="opportunities" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="cases" column="id"  /></column></table>
+<table name="calls_contacts"><column name="contact_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="calls_users"><column name="user_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="calls_leads"><column name="lead_id" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="cases_bugs"><column name="bug_id" type="INT"><foreignKey table="bugs" column="id"  /></column></table>
+<table name="contacts_bugs"><column name="bug_id" type="INT"><foreignKey table="bugs" column="id"  /></column></table>
+<table name="contacts_cases"><column name="case_id" type="INT"><foreignKey table="cases" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="project_task" column="id"  /></column></table>
+<table name="contacts_users"><column name="user_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="bugs" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="aos_quotes" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="bugs" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="cases" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="opportunities" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="tasks" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="project_task" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="prospects" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="aok_knowledgebase" column="id"  /></column></table>
+<table name="meetings_contacts"><column name="contact_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="meetings_users"><column name="user_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="aow_workflow" column="id"  /></column></table>
+<table name="meetings_leads"><column name="lead_id" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="opportunities_contacts"><column name="contact_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="opportunities" column="id"  /></column></table>
+<table name="prospect_list_campaigns"><column name="campaign_id" type="INT"><foreignKey table="campaigns" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="prospect_lists_prospects"><column name="related_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="prospect_lists_prospects"><column name="related_id" type="INT"><foreignKey table="prospects" column="id"  /></column></table>
+<table name="prospect_lists_prospects"><column name="related_id" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="prospect_lists_prospects"><column name="related_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="prospect_lists_prospects"><column name="related_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="fp_events" column="id"  /></column></table>
+<table name="roles_users"><column name="user_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="projects_bugs"><column name="bug_id" type="INT"><foreignKey table="bugs" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="prospects" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="jjwg_maps" column="id"  /></column></table>
+<table name="projects_cases"><column name="case_id" type="INT"><foreignKey table="cases" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="fp_event_locations" column="id"  /></column></table>
+<table name="projects_accounts"><column name="account_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="projects_contacts"><column name="contact_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="projects_opportunities"><column name="opportunity_id" type="INT"><foreignKey table="opportunities" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="email_templates" column="id"  /></column></table>
+<table name="acl_roles_actions"><column name="action_id" type="INT"><foreignKey table="acl_actions" column="id"  /></column></table>
+<table name="acl_roles_users"><column name="user_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="email_marketing_prospect_lists"><column name="prospect_list_id" type="INT"><foreignKey table="prospect_lists" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="notes" column="id"  /></column></table>
+<table name="linked_documents"><column name="document_id" type="INT"><foreignKey table="documents" column="id"  /></column></table>
+<table name="documents_accounts"><column name="account_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="documents_contacts"><column name="contact_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="jjwg_markers" column="id"  /></column></table>
+<table name="documents_opportunities"><column name="opportunity_id" type="INT"><foreignKey table="opportunities" column="id"  /></column></table>
+<table name="documents_cases"><column name="case_id" type="INT"><foreignKey table="cases" column="id"  /></column></table>
+<table name="documents_bugs"><column name="bug_id" type="INT"><foreignKey table="bugs" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="prospect_lists" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="calls" column="id"  /></column></table>
+<table name="aok_knowledgebase_categories"><column name="aok_knowledge_base_categories_id" type="INT"><foreignKey table="aok_knowledge_base_categories" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="campaigns" column="id"  /></column></table>
+<table name="am_projecttemplates_project_1_c"><column name="am_projecttemplates_project_1project_idb" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="am_projecttemplates_contacts_1_c"><column name="contacts_idb" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="am_projecttemplates_users_1_c"><column name="users_idb" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="emails" column="id"  /></column></table>
+<table name="am_tasktemplates_am_projecttemplates_c"><column name="am_tasktemplates_am_projecttemplatesam_tasktemplates_idb" type="INT"><foreignKey table="am_tasktemplates" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="jjwg_areas" column="id"  /></column></table>
+<table name="aos_contracts_documents"><column name="documents_id" type="INT"><foreignKey table="documents" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="aor_reports" column="id"  /></column></table>
+<table name="aos_quotes_os_contracts_c"><column name="aos_quotes4dc0ntracts_idb" type="INT"><foreignKey table="aos_contracts" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="accounts" column="id"  /></column></table>
+<table name="aos_quotes_aos_invoices_c"><column name="aos_quotes6b83nvoices_idb" type="INT"><foreignKey table="aos_invoices" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="aos_quotes_project_c"><column name="aos_quotes7207project_idb" type="INT"><foreignKey table="project" column="id"  /></column></table>
+<table name="emails_beans"><column name="bean_id" type="INT"><foreignKey table="aos_contracts" column="id"  /></column></table>
+<table name="aow_processed_aow_actions"><column name="aow_action_id" type="INT"><foreignKey table="aow_actions" column="id"  /></column></table>
+<table name="fp_event_locations_fp_events_1_c"><column name="fp_event_locations_fp_events_1fp_events_idb" type="INT"><foreignKey table="fp_events" column="id"  /></column></table>
+<table name="securitygroups_users"><column name="user_id" type="INT"><foreignKey table="users" column="id"  /></column></table>
+<table name="fp_events_contacts_c"><column name="fp_events_contactscontacts_idb" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="meetings" column="id"  /></column></table>
+<table name="fp_events_fp_event_locations_1_c"><column name="fp_events_fp_event_locations_1fp_event_locations_idb" type="INT"><foreignKey table="fp_event_locations" column="id"  /></column></table>
+<table name="fp_events_leads_1_c"><column name="fp_events_leads_1leads_idb" type="INT"><foreignKey table="leads" column="id"  /></column></table>
+<table name="fp_events_prospects_1_c"><column name="fp_events_prospects_1prospects_idb" type="INT"><foreignKey table="prospects" column="id"  /></column></table>
+<table name="jjwg_maps_jjwg_areas_c"><column name="jjwg_maps_41f2g_areas_idb" type="INT"><foreignKey table="jjwg_areas" column="id"  /></column></table>
+<table name="jjwg_maps_jjwg_markers_c"><column name="jjwg_maps_2e31markers_idb" type="INT"><foreignKey table="jjwg_markers" column="id"  /></column></table>
+<table name="securitygroups_records"><column name="record_id" type="INT"><foreignKey table="tasks" column="id"  /></column></table>
+<table name="project_contacts_1_c"><column name="project_contacts_1contacts_idb" type="INT"><foreignKey table="contacts" column="id"  /></column></table>
+<table name="accounts_audit"><column name="parent_id" type="INT"><foreignKey table="accounts" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="am_projecttemplates_audit"><column name="parent_id" type="INT"><foreignKey table="am_projecttemplates" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="am_tasktemplates_audit"><column name="parent_id" type="INT"><foreignKey table="am_tasktemplates" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aod_index_audit"><column name="parent_id" type="INT"><foreignKey table="aod_index" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aod_indexevent_audit"><column name="parent_id" type="INT"><foreignKey table="aod_indexevent" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aok_knowledge_base_categories_audit"><column name="parent_id" type="INT"><foreignKey table="aok_knowledge_base_categories" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aok_knowledgebase_audit"><column name="parent_id" type="INT"><foreignKey table="aok_knowledgebase" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aop_case_events_audit"><column name="parent_id" type="INT"><foreignKey table="aop_case_events" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aop_case_updates_audit"><column name="parent_id" type="INT"><foreignKey table="aop_case_updates" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aor_reports_audit"><column name="parent_id" type="INT"><foreignKey table="aor_reports" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_contracts_audit"><column name="parent_id" type="INT"><foreignKey table="aos_contracts" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_invoices_audit"><column name="parent_id" type="INT"><foreignKey table="aos_invoices" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_line_item_groups_audit"><column name="parent_id" type="INT"><foreignKey table="aos_line_item_groups" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_pdf_templates_audit"><column name="parent_id" type="INT"><foreignKey table="aos_pdf_templates" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_product_categories_audit"><column name="parent_id" type="INT"><foreignKey table="aos_product_categories" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_products_audit"><column name="parent_id" type="INT"><foreignKey table="aos_products" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_products_quotes_audit"><column name="parent_id" type="INT"><foreignKey table="aos_products_quotes" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_quotes_audit"><column name="parent_id" type="INT"><foreignKey table="aos_quotes" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aow_workflow_audit"><column name="parent_id" type="INT"><foreignKey table="aow_workflow" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="bugs_audit"><column name="parent_id" type="INT"><foreignKey table="bugs" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="calls_reschedule_audit"><column name="parent_id" type="INT"><foreignKey table="calls_reschedule" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="campaigns_audit"><column name="parent_id" type="INT"><foreignKey table="campaigns" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="cases_audit"><column name="parent_id" type="INT"><foreignKey table="cases" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts_audit"><column name="parent_id" type="INT"><foreignKey table="contacts" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="email_addresses_audit"><column name="parent_id" type="INT"><foreignKey table="email_addresses" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="fp_event_locations_audit"><column name="parent_id" type="INT"><foreignKey table="fp_event_locations" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="fp_events_audit"><column name="parent_id" type="INT"><foreignKey table="fp_events" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="jjwg_address_cache_audit"><column name="parent_id" type="INT"><foreignKey table="jjwg_address_cache" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="jjwg_areas_audit"><column name="parent_id" type="INT"><foreignKey table="jjwg_areas" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="jjwg_maps_audit"><column name="parent_id" type="INT"><foreignKey table="jjwg_maps" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="jjwg_markers_audit"><column name="parent_id" type="INT"><foreignKey table="jjwg_markers" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="leads_audit"><column name="parent_id" type="INT"><foreignKey table="leads" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="opportunities_audit"><column name="parent_id" type="INT"><foreignKey table="opportunities" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="outbound_email_audit"><column name="parent_id" type="INT"><foreignKey table="outbound_email" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="project_task_audit"><column name="parent_id" type="INT"><foreignKey table="project_task" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="securitygroups_audit"><column name="parent_id" type="INT"><foreignKey table="securitygroups" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="surveyquestionoptions_audit"><column name="parent_id" type="INT"><foreignKey table="surveyquestionoptions" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="surveyquestionresponses_audit"><column name="parent_id" type="INT"><foreignKey table="surveyquestionresponses" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="surveyquestions_audit"><column name="parent_id" type="INT"><foreignKey table="surveyquestions" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="surveyresponses_audit"><column name="parent_id" type="INT"><foreignKey table="surveyresponses" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="surveys_audit"><column name="parent_id" type="INT"><foreignKey table="surveys" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="accounts_cstm"><column name="id_c" type="INT"><foreignKey table="accounts" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="aos_contracts_cstm"><column name="id_c" type="INT"><foreignKey table="aos_contracts" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="cases_cstm"><column name="id_c" type="INT"><foreignKey table="cases" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="contacts_cstm"><column name="id_c" type="INT"><foreignKey table="contacts" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="email_templates_cstm"><column name="id_c" type="INT"><foreignKey table="email_templates" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="leads_cstm"><column name="id_c" type="INT"><foreignKey table="leads" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="meetings_cstm"><column name="id_c" type="INT"><foreignKey table="meetings" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="opportunities_cstm"><column name="id_c" type="INT"><foreignKey table="opportunities" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="project_cstm"><column name="id_c" type="INT"><foreignKey table="project" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+<table name="prospects_cstm"><column name="id_c" type="INT"><foreignKey table="prospects" column="id" disableDiagramAssociations="exceptDirect" /></column></table>
+</tables></schemaMeta>
