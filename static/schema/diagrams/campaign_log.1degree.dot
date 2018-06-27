@@ -20,63 +20,63 @@ digraph "oneDegreeRelationshipsDiagram" {
   edge [
     arrowsize="0.8"
   ];
-  "accounts":"id":w -> "campaign_log":"target_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
-  "accounts":"id":w -> "emails":"parent_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "accounts":"id":w -> "leads":"account_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "campaign_log":"related_id":w -> "contacts":"id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "campaign_log":"related_id":w -> "emails":"id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "campaign_log":"related_id":w -> "leads":"id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "campaign_log":"related_id":w -> "opportunities":"id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "campaign_log":"target_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "campaigns":"id":w -> "accounts":"campaign_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "campaigns":"id":w -> "campaign_log":"campaign_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
-  "campaigns":"id":w -> "contacts":"campaign_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "campaigns":"id":w -> "leads":"campaign_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "campaigns":"id":w -> "opportunities":"campaign_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "campaigns":"id":w -> "prospects":"campaign_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "contacts":"id":w -> "campaign_log":"target_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
-  "contacts":"id":w -> "leads":"contact_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "leads":"id":w -> "campaign_log":"target_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
-  "leads":"id":w -> "emails":"parent_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "opportunities":"id":w -> "emails":"parent_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "opportunities":"id":w -> "leads":"opportunity_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "prospects":"id":w -> "campaign_log":"target_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
-  "prospects":"id":w -> "emails":"parent_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "accounts":"assigned_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "accounts":"created_by":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "accounts":"modified_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "campaigns":"assigned_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "campaigns":"created_by":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "campaigns":"modified_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "contacts":"assigned_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "contacts":"created_by":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "contacts":"modified_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "emails":"assigned_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "emails":"created_by":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "emails":"modified_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "leads":"assigned_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "leads":"created_by":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "leads":"modified_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "opportunities":"assigned_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "opportunities":"created_by":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "opportunities":"modified_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "prospects":"assigned_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "prospects":"created_by":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"id":w -> "prospects":"modified_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
+  "accounts":"assigned_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "accounts":"campaign_id":w -> "campaigns":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "accounts":"created_by":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "accounts":"modified_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "campaign_log":"campaign_id":w -> "campaigns":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "campaign_log":"target_id":w -> "accounts":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "campaign_log":"target_id":w -> "contacts":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "campaign_log":"target_id":w -> "leads":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "campaign_log":"target_id":w -> "prospects":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "campaigns":"assigned_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "campaigns":"created_by":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "campaigns":"modified_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "contacts":"assigned_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "contacts":"campaign_id":w -> "campaigns":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "contacts":"created_by":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "contacts":"id":w -> "campaign_log":"related_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
+  "contacts":"modified_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "emails":"assigned_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "emails":"created_by":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "emails":"id":w -> "campaign_log":"related_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
+  "emails":"modified_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "emails":"parent_id":w -> "accounts":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "emails":"parent_id":w -> "leads":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "emails":"parent_id":w -> "opportunities":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "emails":"parent_id":w -> "prospects":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "leads":"account_id":w -> "accounts":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "leads":"assigned_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "leads":"campaign_id":w -> "campaigns":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "leads":"contact_id":w -> "contacts":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "leads":"created_by":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "leads":"id":w -> "campaign_log":"related_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
+  "leads":"modified_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "leads":"opportunity_id":w -> "opportunities":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "opportunities":"assigned_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "opportunities":"campaign_id":w -> "campaigns":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "opportunities":"created_by":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "opportunities":"id":w -> "campaign_log":"related_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
+  "opportunities":"modified_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "prospects":"assigned_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "prospects":"campaign_id":w -> "campaigns":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "prospects":"created_by":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "prospects":"modified_user_id":w -> "users":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "users":"id":w -> "campaign_log":"target_id.type":e [arrowhead=none dir=back arrowtail=teeodot];
   "accounts" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>accounts</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">name</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="deleted" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">deleted</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="assigned_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="parent_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">parent_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="assigned_user_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="parent_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">parent_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="197" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 12</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">17 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">23 &gt;</TD></TR>
     </TABLE>>
     URL="accounts.html"
     tooltip="accounts"
@@ -85,14 +85,14 @@ digraph "oneDegreeRelationshipsDiagram" {
    label=<
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>campaign_log</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">char[36]</TD></TR>
-      <TR><TD PORT="campaign_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">campaign_id</TD></TR></TABLE></TD><TD PORT="campaign_id.type" ALIGN="LEFT">char[36]</TD></TR>
+      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">char[36]</TD></TR>
+      <TR><TD PORT="campaign_id" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">campaign_id</TD></TR></TABLE></TD><TD PORT="campaign_id.type" ALIGN="LEFT">char[36]</TD></TR>
       <TR><TD PORT="target_tracker_key" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">target_tracker_key</TD></TR></TABLE></TD><TD PORT="target_tracker_key.type" ALIGN="LEFT">varchar[36]</TD></TR>
-      <TR><TD PORT="target_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">target_id</TD></TR></TABLE></TD><TD PORT="target_id.type" ALIGN="LEFT">varchar[36]</TD></TR>
+      <TR><TD PORT="target_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">target_id</TD></TR></TABLE></TD><TD PORT="target_id.type" ALIGN="LEFT">varchar[36]</TD></TR>
       <TR><TD PORT="target_type" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">target_type</TD></TR></TABLE></TD><TD PORT="target_type.type" ALIGN="LEFT">varchar[100]</TD></TR>
       <TR><TD PORT="activity_type" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">activity_type</TD></TR></TABLE></TD><TD PORT="activity_type.type" ALIGN="LEFT">varchar[100]</TD></TR>
       <TR><TD PORT="activity_date" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">activity_date</TD></TR></TABLE></TD><TD PORT="activity_date.type" ALIGN="LEFT">datetime[26]</TD></TR>
-      <TR><TD PORT="related_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">related_id</TD></TR></TABLE></TD><TD PORT="related_id.type" ALIGN="LEFT">varchar[36]</TD></TR>
+      <TR><TD PORT="related_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">related_id</TD></TR></TABLE></TD><TD PORT="related_id.type" ALIGN="LEFT">varchar[36]</TD></TR>
       <TR><TD PORT="related_type" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">related_type</TD></TR></TABLE></TD><TD PORT="related_type.type" ALIGN="LEFT">varchar[100]</TD></TR>
       <TR><TD PORT="archived" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">archived</TD></TR></TABLE></TD><TD PORT="archived.type" ALIGN="LEFT">bit[1]</TD></TR>
       <TR><TD PORT="hits" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="127" HEIGHT="16">hits</TD></TR></TABLE></TD><TD PORT="hits.type" ALIGN="LEFT">int[10]</TD></TR>
@@ -110,14 +110,14 @@ digraph "oneDegreeRelationshipsDiagram" {
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>campaigns</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">name</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="assigned_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="assigned_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="tracker_key" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="123" HEIGHT="16">tracker_key</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 10</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">6 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">13 &gt;</TD></TR>
     </TABLE>>
     URL="campaigns.html"
     tooltip="campaigns"
@@ -126,17 +126,17 @@ digraph "oneDegreeRelationshipsDiagram" {
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>contacts</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="deleted" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">deleted</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="assigned_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="assigned_user_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="first_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">first_name</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="last_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">last_name</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="reports_to_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">reports_to_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="reports_to_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">reports_to_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 12</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">25 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">30 &gt;</TD></TR>
     </TABLE>>
     URL="contacts.html"
     tooltip="contacts"
@@ -145,18 +145,18 @@ digraph "oneDegreeRelationshipsDiagram" {
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>emails</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="assigned_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="assigned_user_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="message_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">message_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">name</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="type" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">type</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="status" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">status</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="parent_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">parent_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="parent_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">parent_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="category_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="114" HEIGHT="16">category_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">14 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 12</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 &gt;</TD></TR>
     </TABLE>>
     URL="emails.html"
     tooltip="emails"
@@ -165,23 +165,23 @@ digraph "oneDegreeRelationshipsDiagram" {
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>leads</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="deleted" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">deleted</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="assigned_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="assigned_user_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="first_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">first_name</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="last_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">last_name</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="phone_work" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">phone_work</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="status" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">status</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="reports_to_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">reports_to_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="reports_to_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">reports_to_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="account_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">account_name</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="contact_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">contact_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="account_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">account_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="opportunity_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">opportunity_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="contact_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">contact_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="account_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">account_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="opportunity_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">opportunity_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">20 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 10</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">17 &gt;</TD></TR>
     </TABLE>>
     URL="leads.html"
     tooltip="leads"
@@ -190,16 +190,16 @@ digraph "oneDegreeRelationshipsDiagram" {
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>opportunities</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">name</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="deleted" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">deleted</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="assigned_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="currency_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">currency_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="assigned_user_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="currency_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">currency_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 9</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">14 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">17 &gt;</TD></TR>
     </TABLE>>
     URL="opportunities.html"
     tooltip="opportunities"
@@ -208,17 +208,17 @@ digraph "oneDegreeRelationshipsDiagram" {
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>prospects</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="deleted" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">deleted</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="assigned_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="assigned_user_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="first_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">first_name</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="last_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">last_name</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="tracker_key" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">tracker_key</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="campaign_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="192" HEIGHT="16">campaign_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">11 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">12 &gt;</TD></TR>
     </TABLE>>
     URL="prospects.html"
     tooltip="prospects"
@@ -227,15 +227,15 @@ digraph "oneDegreeRelationshipsDiagram" {
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>users</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="195" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" BGCOLOR="#c0c0c0" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="195" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="user_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="195" HEIGHT="16">user_name</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="first_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="195" HEIGHT="16">first_name</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="last_name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="195" HEIGHT="16">last_name</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="status" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="195" HEIGHT="16">status</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="reports_to_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="195" HEIGHT="16">reports_to_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="reports_to_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="195" HEIGHT="16">reports_to_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="is_group" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="195" HEIGHT="16">is_group</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 203</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">13 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">214 &gt;</TD></TR>
     </TABLE>>
     URL="users.html"
     tooltip="users"

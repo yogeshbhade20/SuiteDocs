@@ -335,7 +335,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="template_id">template_id</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="template_id">template_id</span></td>
 				 <td>CHAR</td>
 				 <td>36</td>
 				 <td title=''></td>
@@ -343,18 +343,18 @@
 				 <td>null</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
-					<td title="email_templates.id references email_marketing.template_id">
+					<td title="email_marketing.template_id references email_templates.id">
 						<a href='email_templates.html'>email_templates</a><span class='relatedKey'>.id</span>
 					</td>
 					<td class="constraint detail">
 						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
 					</td>
 				   </tr>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
 				  </table>					 
 				 </td>
 				 <td></td>
@@ -377,7 +377,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="campaign_id">campaign_id</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="campaign_id">campaign_id</span></td>
 				 <td>CHAR</td>
 				 <td>36</td>
 				 <td title='nullable'>√</td>
@@ -385,18 +385,18 @@
 				 <td>null</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
-					<td title="campaigns.id references email_marketing.campaign_id">
+					<td title="email_marketing.campaign_id references campaigns.id">
 						<a href='campaigns.html'>campaigns</a><span class='relatedKey'>.id</span>
 					</td>
 					<td class="constraint detail">
 						Defined in XML <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
 					</td>
 				   </tr>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
 				  </table>					 
 				 </td>
 				 <td></td>
@@ -508,35 +508,34 @@
             <div class="tab-content no-padding">            
 				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="campaigns.html" title="campaigns" alt="" coords="421,571,634,835">
-<area shape="rect" id="node2" href="email_marketing.html" title="email_marketing" alt="" coords="5,61,317,659">
-<area shape="rect" id="node3" href="email_marketing_prospect_lists.html" title="email_marketing_prospect_lists" alt="" coords="361,5,693,181">
-<area shape="rect" id="node4" href="email_templates.html" title="email_templates" alt="" coords="427,377,628,553">
+<area shape="rect" id="node1" href="email_marketing.html" title="email_marketing" alt="" coords="263,61,575,659">
+<area shape="rect" id="node2" href="campaigns.html" title="campaigns" alt="" coords="5,571,219,835">
+<area shape="rect" id="node3" href="email_templates.html" title="email_templates" alt="" coords="11,377,213,553">
+<area shape="rect" id="node4" href="email_marketing_prospect_lists.html" title="email_marketing_prospect_lists" alt="" coords="619,5,951,181">
 </map>
 
 					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/email_marketing.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
 				</div>
 				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="1391,516,1536,604">
-<area shape="rect" id="node2" href="campaign_log.html" title="campaign_log" alt="" coords="1168,275,1347,363">
-<area shape="rect" id="node3" href="leads.html" title="leads" alt="" coords="18,421,135,509">
-<area shape="rect" id="node4" href="contacts.html" title="contacts" alt="" coords="264,273,406,361">
-<area shape="rect" id="node5" href="opportunities.html" title="opportunities" alt="" coords="248,379,422,467">
-<area shape="rect" id="node6" href="users.html" title="users" alt="" coords="898,516,1019,604">
-<area shape="rect" id="node7" href="campaigns.html" title="campaigns" alt="" coords="535,723,748,987">
-<area shape="rect" id="node11" href="prospects.html" title="prospects" alt="" coords="260,552,410,640">
-<area shape="rect" id="node12" href="surveyresponses.html" title="surveyresponses" alt="" coords="234,657,436,745">
-<area shape="rect" id="node15" href="prospect_lists.html" title="prospect_lists" alt="" coords="552,1004,732,1092">
-<area shape="rect" id="node16" href="email_templates.html" title="email_templates" alt="" coords="541,1365,742,1541">
-<area shape="rect" id="node8" href="campaign_trkrs.html" title="campaign_trkrs" alt="" coords="240,904,430,992">
-<area shape="rect" id="node9" href="email_marketing.html" title="email_marketing" alt="" coords="179,1009,491,1607">
-<area shape="rect" id="node10" href="emailman.html" title="emailman" alt="" coords="261,799,409,887">
-<area shape="rect" id="node13" href="campaigns_audit.html" title="campaigns_audit" alt="" coords="858,657,1058,745">
-<area shape="rect" id="node14" href="email_marketing_prospect_lists.html" title="email_marketing_prospect_lists" alt="" coords="792,1145,1124,1321">
-<area shape="rect" id="node17" href="email_templates_cstm.html" title="email_templates_cstm" alt="" coords="840,1339,1076,1427">
-<area shape="rect" id="node18" href="prospect_list_campaigns.html" title="prospect_list_campaigns" alt="" coords="830,883,1086,971">
-<area shape="rect" id="node19" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="1580,516,1830,604">
+<area shape="rect" id="node1" href="accounts.html" title="accounts" alt="" coords="291,204,436,292">
+<area shape="rect" id="node2" href="campaigns.html" title="campaigns" alt="" coords="5,553,219,817">
+<area shape="rect" id="node3" href="campaign_log.html" title="campaign_log" alt="" coords="941,232,1119,320">
+<area shape="rect" id="node4" href="contacts.html" title="contacts" alt="" coords="293,98,434,186">
+<area shape="rect" id="node5" href="leads.html" title="leads" alt="" coords="605,268,723,356">
+<area shape="rect" id="node6" href="prospects.html" title="prospects" alt="" coords="589,409,739,497">
+<area shape="rect" id="node15" href="opportunities.html" title="opportunities" alt="" coords="276,345,451,433">
+<area shape="rect" id="node7" href="campaign_trkrs.html" title="campaign_trkrs" alt="" coords="269,450,458,538">
+<area shape="rect" id="node8" href="campaigns_audit.html" title="campaigns_audit" alt="" coords="263,556,463,644">
+<area shape="rect" id="node9" href="email_marketing.html" title="email_marketing" alt="" coords="508,1010,820,1608">
+<area shape="rect" id="node10" href="email_templates.html" title="email_templates" alt="" coords="263,902,464,1078">
+<area shape="rect" id="node11" href="email_marketing_prospect_lists.html" title="email_marketing_prospect_lists" alt="" coords="864,861,1196,1037">
+<area shape="rect" id="node12" href="prospect_lists.html" title="prospect_lists" alt="" coords="574,800,754,888">
+<area shape="rect" id="node13" href="email_templates_cstm.html" title="email_templates_cstm" alt="" coords="546,905,782,993">
+<area shape="rect" id="node14" href="emailman.html" title="emailman" alt="" coords="289,697,437,785">
+<area shape="rect" id="node16" href="prospect_list_campaigns.html" title="prospect_list_campaigns" alt="" coords="902,1321,1158,1409">
+<area shape="rect" id="node17" href="securitygroups_records.html" title="securitygroups_records" alt="" coords="905,549,1155,637">
+<area shape="rect" id="node18" href="surveyresponses.html" title="surveyresponses" alt="" coords="563,622,765,710">
 </map>
 
 					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/email_marketing.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							

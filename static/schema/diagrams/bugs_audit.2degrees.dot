@@ -21,51 +21,32 @@ digraph "twoDegreesRelationshipsDiagram" {
     arrowsize="0.8"
   ];
   "accounts_bugs":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "bugs":"id":w -> "calls":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "bugs":"id":w -> "emails":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "bugs":"id":w -> "meetings":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "bugs":"id":w -> "notes":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "bugs":"id":w -> "tasks":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
+  "bugs":"fixed_in_release":w -> "releases":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "bugs":"found_in_release":w -> "releases":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "bugs_audit":"parent_id":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "calls":"elipses":w -> "notes":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
+  "calls":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "cases_bugs":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "contacts_bugs":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "documents_bugs":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "emails":"elipses":w -> "meetings":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "emails":"elipses":w -> "notes":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
+  "emails":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "emails_beans":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "emails_beans":"elipses":w -> "tasks":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "emails_beans":"elipses":w -> "users":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "emails_beans":"elipses":w -> "emails":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "meetings":"elipses":w -> "notes":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
+  "meetings":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "meetings":"elipses":w -> "emails":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "notes":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "notes":"elipses":w -> "calls":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "notes":"elipses":w -> "emails":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "notes":"elipses":w -> "meetings":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "notes":"elipses":w -> "tasks":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "projects_bugs":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "releases":"elipses":w -> "bugs":"fixed_in_release":e [arrowhead=none dir=back arrowtail=teeodot];
-  "releases":"elipses":w -> "bugs":"found_in_release":e [arrowhead=none dir=back arrowtail=teeodot];
   "securitygroups_records":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "securitygroups_records":"elipses":w -> "calls":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "securitygroups_records":"elipses":w -> "emails":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "securitygroups_records":"elipses":w -> "meetings":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "securitygroups_records":"elipses":w -> "notes":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "securitygroups_records":"elipses":w -> "tasks":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "tasks":"elipses":w -> "notes":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "bugs":"assigned_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "bugs":"created_by":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "bugs":"modified_user_id":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "calls":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "calls":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "calls":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "emails":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "emails":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "emails":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "meetings":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "meetings":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "meetings":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "notes":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "notes":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "notes":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "tasks":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "tasks":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
-  "users":"elipses":w -> "tasks":"elipses":e [arrowhead=none dir=back arrowtail=teeodot];
+  "tasks":"elipses":w -> "bugs":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "accounts_bugs" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -80,14 +61,14 @@ digraph "twoDegreesRelationshipsDiagram" {
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>bugs</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="name" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">name</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="assigned_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="modified_user_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">modified_user_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="created_by" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">created_by</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="assigned_user_id" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">assigned_user_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="bug_number" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">bug_number</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="found_in_release" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">found_in_release</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="fixed_in_release" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">fixed_in_release</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="found_in_release" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">found_in_release</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="fixed_in_release" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="118" HEIGHT="16">fixed_in_release</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">13 &gt;</TD></TR>
     </TABLE>>
@@ -98,8 +79,8 @@ digraph "twoDegreesRelationshipsDiagram" {
    label=<
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>bugs_audit</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">char[36]</TD></TR>
-      <TR><TD PORT="parent_id" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/html/schemas/suitecrm/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">parent_id</TD></TR></TABLE></TD><TD PORT="parent_id.type" ALIGN="LEFT">char[36]</TD></TR>
+      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">char[36]</TD></TR>
+      <TR><TD PORT="parent_id" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="/var/www/hugo/static/schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">parent_id</TD></TR></TABLE></TD><TD PORT="parent_id.type" ALIGN="LEFT">char[36]</TD></TR>
       <TR><TD PORT="date_created" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">date_created</TD></TR></TABLE></TD><TD PORT="date_created.type" ALIGN="LEFT">datetime[26]</TD></TR>
       <TR><TD PORT="created_by" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">created_by</TD></TR></TABLE></TD><TD PORT="created_by.type" ALIGN="LEFT">varchar[36]</TD></TR>
       <TR><TD PORT="field_name" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">field_name</TD></TR></TABLE></TD><TD PORT="field_name.type" ALIGN="LEFT">varchar[100]</TD></TR>
@@ -118,7 +99,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>calls</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">16 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 12</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">6 &gt;</TD></TR>
     </TABLE>>
     URL="calls.html"
     tooltip="calls"
@@ -158,7 +139,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>emails</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">14 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 12</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 &gt;</TD></TR>
     </TABLE>>
     URL="emails.html"
     tooltip="emails"
@@ -178,7 +159,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>meetings</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">19 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 14</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">6 &gt;</TD></TR>
     </TABLE>>
     URL="meetings.html"
     tooltip="meetings"
@@ -188,7 +169,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>notes</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">20 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 19</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 &gt;</TD></TR>
     </TABLE>>
     URL="notes.html"
     tooltip="notes"
@@ -208,7 +189,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>releases</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 &gt;</TD></TR>
     </TABLE>>
     URL="releases.html"
     tooltip="releases"
@@ -228,19 +209,9 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>tasks</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">16 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 14</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">3 &gt;</TD></TR>
     </TABLE>>
     URL="tasks.html"
     tooltip="tasks"
-  ];
-  "users" [
-   label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>users</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 203</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">13 &gt;</TD></TR>
-    </TABLE>>
-    URL="users.html"
-    tooltip="users"
   ];
 }
